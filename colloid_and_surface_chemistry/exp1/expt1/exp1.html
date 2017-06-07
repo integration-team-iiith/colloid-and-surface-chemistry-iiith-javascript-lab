@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="exp1.css">
+        <script type="text/javascript" src="exp1.js"></script>
+    <title> Sol </title> 
+    </head>
+    <body>
+        <div class = "container">
+                <h3> Preperation of Sol </h3><br>
+                <div class = "row" id = "initial-frame">
+                    <div id = "instr" > click on the Beaker to Pour water into the Beaker.</div>
+                    <img id = "beaker" src = "../sprites/DefineSprite_42_emptyBeaker/1.png" onclick="moveBeaker()">
+                    <img id = "liquid" src = "../sprites/DefineSprite_128_colloid_fla.contet_22/1.png">
+                    <img id = "orangeLiquid" src = "../shapes/144.png">
+                    <img id = "heater" src = "../sprites/DefineSprite_60/1.png">
+                    <img id = "table" src = "../images/table.png">
+                    <img id = "arrow_sign" src = "../shapes/63.png">
+                    <img id = "water_label">
+                    <img id = "flask" src = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/1.png">
+                    <img id = "spoon" src = "../shapes/130.png" onclick="mixPowder()">
+                    <img id = "arrow_spoon" src = "../shapes/137.png">
+                    <div id = "pointer_spoon"> powedered <br> FeCl<sub>3</sub></div>
+                   <div id = "with_fecl3">
+                    <img id = "new_spoon"  src = "../shapes/spoon_crop.png">
+                    <img id = "powder" src = "../shapes/143.png">
+                    <div id = "glassRod" > Glass <br> rod </div>
+                    <img id = "glass_rod_arrow" src = "../shapes/176.png">
+                    <img id = "glassrod" src = "../shapes/149.png" onclick="helper()">
+                    <img id = "final_flask" src = "../sprites/DefineSprite_183/1.png" onclick="moveConical()">
+                    <div id = "conical" > conical <br> flask </div>
+                    <img id = "conical_arrow" src = "../shapes/189.png">
+                    <img id = "coin" src = "../shapes/9.png" onclick="dropCoin()">
+                    <img id = "stirrer_btn" src = "../shapes/25.png"  onclick="boilSol1()">
+                    <img id = "heat_btn" src = "../shapes/25.png" onclick="red_button()">
+                    <img id = "red_btn" src = "../shapes/192.png">
+                    <img id = "bubble_in_mgnt" src = "../shapes/204.png">
+                   </div>
+                <button id = "reset_button" onclick = "window.location.reload()">Reset Experiment</button><br>
+                </div>
+                <div id="initial_instruction" > Beaker </div> <br>
+        </div>
+    </body>
+</html>
