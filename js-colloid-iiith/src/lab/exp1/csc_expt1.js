@@ -95,7 +95,9 @@ function addclickEvents(){
     document.getElementById("button2").addEventListener("click",function(){
     	callButton2();
     },false)
-    
+    document.getElementById("pipette").addEventListener("click",function(){
+    	callPipette();
+    },false)
 }
 
 function beakr(){
@@ -269,7 +271,6 @@ function stirRod(){
 	{
 		stir[i]="img_exp1/glass_rod/" + i + ".png";
 	}
-	console.log(x);
 	if(x<stir.length)
 	{
 		img.src=stir[x];
@@ -362,33 +363,91 @@ function callButton2(){
 	$("#change").html("Switch on the Stirrer of the Magnetic Stirrer & Heater ...");
 	step_no++;
 	}
+	else if(step_no ==6){
+		clearInterval(id4);
+		$("#heat_arrow").hide();
+		$("#heat_txt").hide();
+		$("#heat_bubb").hide();
+		$("#change").html("Click on the pipette to take 10ml conc. FeCl<sub>3</sub> from the beaker.....");
+		$("#red_button").hide();
+		$("#pipette").show();
+		$("#beak_spoon").attr('src',"img_exp1/shapes/beak.png");
+		$("#div_fecl3").hide();
+		$("#beak_spoon").css("left","21.33%");
+		$("#beak_spoon").css("top","266%");
+		$("#beak_spoon").css("height","60%");
+		$("#pip_arrow").show();
+		$("#pip_txt").show();
+		initial_top = Math.round($("#beak_spoon").position().top);
+    	initial_left = Math.round($("#beak_spoon").position().left);	
+	    step_top=0;
+ 	   	step_left=1.3;
+   		final_top=0;
+   		final_left=510;
+  		type_of_movement=4;
+ 	   	elem=document.getElementById("beak_spoon");
+   		moveImage();
+   		step_no++;
+	}
 }
 
 function callButton1(){
 	if(step_no==5){
 		x=1;
-		id3=setInterval(spin_magnet,50);
-		setTimeout(boil_water,3000);
+		setTimeout(boil,3000);
+		$("#stir_arrow").hide();
+		$("#stir_txt").hide();
+		step_no++;
+		$("#magnet").hide();
+		$("#change").html("Wait till the water starts boiling.....");
+		$("#mag").show();
 	}
 }
 
-function spin_magnet(){
-	i=1;
-	var spin=[];
-	img=document.getElementById("magnet");
-	for(i=1;i<=24;i++)
-		spin[i]="img_exp1/sprites/Magnet_Bead/" + i + ".png";
-	if(x<spin.length)
-	{
-		img.src=spin[x];
-	}
-	x++;
-	if(x==25)
-	{
-		x=1;
-	}
+function boil(){
+	console.log("yes");
+	$("#heat_bubb").show();
+	id4=setInterval(boil_water,150)
 }
 
 function boil_water(){
-	
+	i=1;
+	img=document.getElementById("heat_bubb");
+	var water=[]
+	for(i=0;i<=80;i++)
+	{
+		if(i%2){
+			water[i]="img_exp1/heat_bubbles/1.png";
+		}
+		else{
+			water[i]="img_exp1/heat_bubbles/2.png"
+		}
+	}
+	x++;
+	if(x<water.length)
+	{
+		console.log("x")
+		img.src=water[x];
+	}
+	if(x==10){
+		x=1;
+		$("#heat_arrow").show();
+		$("#change").html("Now that the water gas started boiling, Switch off the Heater.....");
+		$("#heat_txt").show();
+	}
+}
+
+function callPipette(){
+	if(step_no==7){
+		step_no++;
+		initial_top = Math.round($("#pipette").position().top);
+    	initial_left = Math.round($("#pipette").position().left);	
+	    step_top=1;
+ 	   	step_left=-0.2;
+   		final_top=350;
+   		final_left=100;
+  		type_of_movement=0;
+ 	   	elem=document.getElementById("pipette");
+   		moveImage();
+	}
 }
