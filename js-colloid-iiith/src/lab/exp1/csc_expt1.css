@@ -50,7 +50,7 @@ h3{
 #beak{
 	position: absolute;
 	left: 47%;
-	top: 112%;
+	top: 122%;
 	font-size: 25px;
 	color: #00F;
 }
@@ -388,5 +388,14 @@ h3{
 
 #circle{
 	position: absolute;
+	top: 174%;
+	left: 50%;
+	display: none;
+}
+
+#coll_bubb{
+	position: absolute;
+	left: 40%;
+	top: 150%;
 	display: none;
 }

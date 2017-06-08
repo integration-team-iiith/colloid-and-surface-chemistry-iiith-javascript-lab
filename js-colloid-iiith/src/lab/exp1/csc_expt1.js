@@ -98,7 +98,7 @@ function addclickEvents(){
     document.getElementById("pipette").addEventListener("click",function(){
     	callPipette();
     },false)
-    document.getElementById("red_flask".addEventListener("click",function(){
+    document.getElementById("red_flask").addEventListener("click",function(){
     	callCircle();
     },false)
 }
@@ -479,7 +479,7 @@ function callPipette(){
    			$("#pip_txt").show();
    			$("#pip_arrow").show();
    			$("#change").html("Click on the pipette again to add the FeCl<sub>3</sub> taken from the beaker, to the hot water in conical flask, drop by drop.....")
-   		},4500)
+   		},3000)
    		console.log(step_no);
    	}
    		else if(step_no==8)
@@ -527,5 +527,19 @@ function callPipette(){
 }
 
 function callCircle(){
-	
+	if(step_no==10){
+		$("#circle").show();
+		setTimeout(function(){
+			$("#circle").attr("src","img_exp1/shapes/circle2.png");
+			$("#circle").css("left","42%");
+			$("#circle").css("top","145%");
+		},50);
+		setTimeout(function(){
+			$("#circle").attr("src","img_exp1/shapes/272.png");
+			$("#circle").css("left","36%");
+			$("#circle").css("top","124%");
+			$("#coll_bubb").show();
+		},50);
+
+	}
 }
