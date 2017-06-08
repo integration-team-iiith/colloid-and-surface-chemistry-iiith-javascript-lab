@@ -86,7 +86,6 @@ h3{
 }
 
 #flask{
-    z-index: -1;
     position: absolute;
     left: -42%;
     top: 47%;
@@ -96,7 +95,7 @@ h3{
 #spoon{
     position: absolute;
     left: 45%;
-    top: 20%;
+    top: 22%;
     display: none;
 }
 
@@ -161,7 +160,7 @@ h3{
 #final_flask{
     position: absolute;
     left: 67%;
-    top: 18%;
+    top: 22%;
     display: none;
 
 }
@@ -184,7 +183,7 @@ h3{
 #coin{
     position: absolute;
     left:68.75%;
-    top:20%;
+    top:22%;
     display: none;
 }
 
@@ -224,13 +223,20 @@ h3{
 
 #instr{
     position: absolute;
-    left: 12%;
-    top: 10%;
+    left: 35%;
+    top: 12%;
     height: 8%;
     width: 80%;
-    background-color: black;
-    color: green;
+    z-index: 2;
+    color: limegreen;
     font-family: "Times New Roman", Times, serif ;
+}
+
+#black_strip{
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    width: 80%;
 }
 
 #bubble_in_mgnt{
@@ -238,5 +244,214 @@ h3{
     top: 50%;
     left: 68%;
     -webkit-filter: grayscale(100%);
+    display: none;
+}
+
+#magnetic_bead{
+    position: absolute;
+    top: 28%;
+    left: 35%;
+    color: blue;
+    display: none;
+}
+
+#coin_arrow{
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    display: none;
+}
+
+#heat_arrow{
+    position: absolute;
+    top: 31%;
+    left: 68%;
+    display: none;
+}
+
+#heat_instr{
+    position: absolute;
+    top: 28%;
+    left: 62%;
+    color: darkblue;
+    display: none;
+}
+
+#stirrer_arrow{
+    position: absolute;
+    top: 34%;
+    left: 62%;
+    display: none;
+}
+
+#stirrer_instr{
+    position: absolute;
+    top: 29%;
+    left: 70%;
+    color: darkblue;
+    display: none;
+}
+
+#pippet{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 2;
+    display: none;
+}
+
+#pippet_arrow{
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    display: none;
+}
+
+#pippet_sign{
+    position: absolute;
+    top: 30%;
+    left: 76%;
+    color: darkblue;
+    display: none;
+}
+
+
+#pippet1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    display: none;
+}
+
+#drop{
+    position: absolute;
+    top: 40%;
+    left: 69%;
+    height: 2%;
+    display: none;
+}
+
+
+#red_flask{
+    position: absolute;
+    top:45.5%;
+    left:67%;
+    display: none;
+}
+
+#round{
+    position: absolute;
+    top: 29%;
+    left: 35%;
+    z-index: 2;
+    display: none;
+}
+
+#bbl1{
+    position: absolute;
+    top:35%;
+    left:43%;
+    display: none;
+}
+
+#bbl2{
+    position: absolute;
+    top: 35%;
+    left:45%;
+    z-index: -1;
+    display: none;
+}
+
+#bbl3{
+    position: absolute;
+    top:35%;
+    left:46%;
+    z-index: -2;
+    display: none;
+}
+
+#bbl4{
+    position: absolute;
+    top: 37%;
+    left:46%;
+    z-index: -3;
+    display: none;
+}
+
+#bbl5{
+    position: absolute;
+    top: 36%;
+    left: 44%;
+    z-index: -4;
+    display: none;
+}
+
+#beaker_with_rod{
+    position: absolute;
+    top: 51%;
+    left: 31%;
+    display: none;
+}
+
+#yellowtag{
+    position: absolute;
+    top: 43%;
+    left: 32%;
+    width: 25%;
+    display: none;
+}
+
+#pour_water{
+    position: absolute;
+    top: 46%;
+    left: 35%;
+    display: none;
+}
+
+#watertag{
+    position: absolute;
+    top: 62%;
+    left: 34%;
+    display: none;
+}
+
+#waterlabel{
+    position: absolute;
+    top: 63%;
+    left: 36%;
+    display: none;
+    z-index: 2;
+}
+
+
+#yellowtag2{
+    position: absolute;
+    top: 43%;
+    left: 45%;
+    width: 20%;
+    display: none;
+}
+
+#fillfecl3{
+    position: absolute;
+    top: 44%;
+    left: 46.5%;
+    display: none;
+}
+
+#fecl3text{
+    position: absolute;
+    top: 61%;
+    left: 28%;
+    z-index: 2;
+    color: darkred;
+    display: none;
+}
+
+#feohSol{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    color: darkred;
     display: none;
 }

@@ -2,9 +2,11 @@
 // This function is a general method used to move images from initial position to final position.
 var y=0;
 var count=0;
+var count1 = 0;
 var z = 0;
 var x = 0;
 var w = 0;
+var p = 0;
 function moveImage(){
     id = setInterval(frame, 5);
     function frame() {
@@ -34,6 +36,8 @@ function moveImage(){
     } 
 }
 
+
+
 //To disable and enable the cursor pointers on elements.
 function cursorPointers(id1, id2){
     document.getElementById(id1).style.cursor = "default";
@@ -56,161 +60,48 @@ function moveBeaker(){
 
 function removeArrow(){
     $('#arrow_sign,#initial_instruction').remove();
-    setTimeout(moveFlask,3000);
-    setTimeout(showfecl3,5000);
+    setTimeout(showWaterTag,2000);
+    setTimeout(moveFlask,4000);
+    setTimeout(changeFlask,3000);
+    setTimeout(removeFlask,5000);
+    setTimeout(showfecl3,6000);
+}
+
+function showWaterTag(){
+    $('#yellowtag').show();
+    $('#pour_water').show();
+    $('#flask').show();
+    setTimeout(Watertag2,1000);
+}
+
+function Watertag2(){
+    $('#watertag').show();
+    $('#waterlabel').show();
+    setTimeout(removeWatertag2,1500);
+}
+
+function removeWatertag2(){
+    $('#waterlabel').hide();
+    $('#watertag').hide();
 }
 
 function moveFlask(){
-    setInterval(changeFlask,50);
+    $('#flask').show();
 }
 
 function changeFlask(){
-    $('#flask').show();
     $('#liquid').show();
-    img = document.getElementById('flask');
-    img1 = document.getElementById('liquid');
-    var Flask = [];
-    
-    Flask[0] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/1.png";
-    Flask[1] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/2.png";
-    Flask[2] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/4.png";
-    Flask[3] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/5.png";
-    Flask[4] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/6.png";
-    Flask[5] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/7.png";
-    Flask[6] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/8.png";
-    Flask[7] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/9.png";
-    Flask[8] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/10.png";
-    Flask[9] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/11.png";
-    Flask[10] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/12.png";
-    Flask[11] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/13.png";
-    Flask[12] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/14.png";
-    Flask[13] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/15.png";
-    Flask[14] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/16.png";
-    Flask[15] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/17.png";
-    Flask[16] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/18.png";
-    Flask[17] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/19.png";
-    Flask[18] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/20.png";
-    Flask[19] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/21.png";
-    Flask[20] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/22.png";
-    Flask[21] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/23.png";
-    Flask[22] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/24.png";
-    Flask[23] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/25.png";
-    Flask[24] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/26.png";
-    Flask[25] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/27.png";
-    Flask[26] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/28.png";
-    Flask[27] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/29.png";
-    Flask[28] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/30.png";
-    Flask[29] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/31.png";
-    Flask[30] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/32.png";
-    Flask[31] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/33.png";
-    Flask[32] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/34.png";
-    Flask[33] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/35.png";
-    Flask[34] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/36.png";
-    Flask[35] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/37.png";
-    Flask[36] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/38.png";
-    Flask[37] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/39.png";
-    Flask[38] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/40.png";
-    Flask[39] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/41.png";
-    Flask[40] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/42.png";
-    Flask[41] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/43.png";
-    Flask[42] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/44.png";
-    Flask[43] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/45.png";
-    Flask[45] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/46.png";
-    Flask[46] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/47.png";
-    Flask[47] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/48.png";
-    Flask[48] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/49.png";
-    Flask[49] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/50.png";
-    Flask[50] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/51.png";
-    Flask[51] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/52.png";
-    Flask[52] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/53.png";
-    Flask[53] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/54.png";
-    Flask[54] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/55.png";
-    Flask[55] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/56.png";
-    Flask[56] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/57.png";
-    Flask[57] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/58.png";
-    Flask[58] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/59.png";
-    Flask[59] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/60.png";
-    Flask[60] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/61.png";
-    Flask[61] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/62.png";
-    Flask[62] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/63.png";
-    Flask[63] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/64.png";
-    Flask[64] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/65.png";
-    Flask[65] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/66.png";
-    Flask[66] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/67.png";
-    Flask[67] = "../sprites/DefineSprite_110_colloid_fla.ghhhhhhhhhhhh_18/68.png";
-
-    var Water = [];
-    Water[0] = "../sprites/DefineSprite_128_colloid_fla.contet_22/1.png";
-    Water[1] = "../sprites/DefineSprite_128_colloid_fla.contet_22/2.png";
-    Water[2] = "../sprites/DefineSprite_128_colloid_fla.contet_22/3.png";
-    Water[3] = "../sprites/DefineSprite_128_colloid_fla.contet_22/4.png";
-    Water[4] = "../sprites/DefineSprite_128_colloid_fla.contet_22/5.png"; 
-    Water[5] = "../sprites/DefineSprite_128_colloid_fla.contet_22/6.png";
-    Water[6] = "../sprites/DefineSprite_128_colloid_fla.contet_22/7.png";
-    Water[7] = "../sprites/DefineSprite_128_colloid_fla.contet_22/8.png";
-    Water[8] = "../sprites/DefineSprite_128_colloid_fla.contet_22/9.png";
-    Water[9] = "../sprites/DefineSprite_128_colloid_fla.contet_22/10.png";
-    Water[10] = "../sprites/DefineSprite_128_colloid_fla.contet_22/11.png";
-    Water[11] = "../sprites/DefineSprite_128_colloid_fla.contet_22/12.png";
-    Water[12] = "../sprites/DefineSprite_128_colloid_fla.contet_22/13.png";
-    Water[13] = "../sprites/DefineSprite_128_colloid_fla.contet_22/14.png";
-    Water[14] = "../sprites/DefineSprite_128_colloid_fla.contet_22/15.png";
-    Water[15] = "../sprites/DefineSprite_128_colloid_fla.contet_22/16.png";
-    Water[16] = "../sprites/DefineSprite_128_colloid_fla.contet_22/17.png";
-    Water[17] = "../sprites/DefineSprite_128_colloid_fla.contet_22/18.png";
-    Water[18] = "../sprites/DefineSprite_128_colloid_fla.contet_22/19.png";
-    Water[19] = "../sprites/DefineSprite_128_colloid_fla.contet_22/20.png";
-    Water[20] = "../sprites/DefineSprite_128_colloid_fla.contet_22/21.png";
-    Water[21] = "../sprites/DefineSprite_128_colloid_fla.contet_22/22.png";
-    Water[22] = "../sprites/DefineSprite_128_colloid_fla.contet_22/23.png";
-    Water[23] = "../sprites/DefineSprite_128_colloid_fla.contet_22/24.png";
-    Water[24] = "../sprites/DefineSprite_128_colloid_fla.contet_22/25.png";
-    Water[25] = "../sprites/DefineSprite_128_colloid_fla.contet_22/26.png";
-    Water[26] = "../sprites/DefineSprite_128_colloid_fla.contet_22/27.png";
-    Water[27] = "../sprites/DefineSprite_128_colloid_fla.contet_22/28.png";
-    Water[28] = "../sprites/DefineSprite_128_colloid_fla.contet_22/29.png";
-    Water[29] = "../sprites/DefineSprite_128_colloid_fla.contet_22/30.png";
-    Water[30] = "../sprites/DefineSprite_128_colloid_fla.contet_22/31.png";
-    Water[31] = "../sprites/DefineSprite_128_colloid_fla.contet_22/32.png";
-    Water[32] = "../sprites/DefineSprite_128_colloid_fla.contet_22/33.png";
-    Water[33] = "../sprites/DefineSprite_128_colloid_fla.contet_22/34.png";
-    Water[34] = "../sprites/DefineSprite_128_colloid_fla.contet_22/35.png";
-    Water[35] = "../sprites/DefineSprite_128_colloid_fla.contet_22/36.png";
-    Water[36] = "../sprites/DefineSprite_128_colloid_fla.contet_22/37.png";
-    Water[37] = "../sprites/DefineSprite_128_colloid_fla.contet_22/38.png";
-    Water[38] = "../sprites/DefineSprite_128_colloid_fla.contet_22/39.png";
-    Water[39] = "../sprites/DefineSprite_128_colloid_fla.contet_22/40.png";
-    Water[40] = "../sprites/DefineSprite_128_colloid_fla.contet_22/41.png";
-    Water[41] = "../sprites/DefineSprite_128_colloid_fla.contet_22/42.png";
-    Water[42] = "../sprites/DefineSprite_128_colloid_fla.contet_22/44.png";
-    Water[43] = "../sprites/DefineSprite_128_colloid_fla.contet_22/45.png";
-    Water[45] = "../sprites/DefineSprite_128_colloid_fla.contet_22/46.png";
-    Water[46] = "../sprites/DefineSprite_128_colloid_fla.contet_22/47.png";
-    Water[47] = "../sprites/DefineSprite_128_colloid_fla.contet_22/48.png";
-    Water[48] = "../sprites/DefineSprite_128_colloid_fla.contet_22/49.png";
-    Water[49] = "../sprites/DefineSprite_128_colloid_fla.contet_22/50.png";
-    Water[50] = "../sprites/DefineSprite_128_colloid_fla.contet_22/51.png";
-    Water[51] = "../sprites/DefineSprite_128_colloid_fla.contet_22/52.png";
-    Water[52] = "../sprites/DefineSprite_128_colloid_fla.contet_22/53.png";
-    Water[53] = "../sprites/DefineSprite_128_colloid_fla.contet_22/54.png";
-    Water[54] = "../sprites/DefineSprite_128_colloid_fla.contet_22/55.png";
-    Water[55] = "../sprites/DefineSprite_128_colloid_fla.contet_22/56.png";
-    Water[56] = "../sprites/DefineSprite_128_colloid_fla.contet_22/57.png";
-    Water[57] = "../sprites/DefineSprite_128_colloid_fla.contet_22/58.png";
-    Water[58] = "../sprites/DefineSprite_128_colloid_fla.contet_22/59.png";
-    Water[59] = "../sprites/DefineSprite_128_colloid_fla.contet_22/60.png";
-    Water[60] = "../sprites/DefineSprite_128_colloid_fla.contet_22/61.png";
-    
-    if(y < Flask.length){
-        img.src = Flask[y];
-    }
-    if(y < Water.length){
-        img1.src = Water[y];
-    }
-        y+=1;
 }
 
-//    $("#water_label").attr('src', '../sprites/DefineSprite_134/waterlabel.png'); 
+function removeFlask(){
+    $('#yellowtag').hide();
+    $('#pour_water').hide();
+    $('#flask').hide();
+    $('#liquid').show();
+    img = document.getElementById('liquid');
+    img.src = "../sprites/DefineSprite_128_colloid_fla.contet_22/67.png";
+}
+
     
 
 function showfecl3(){
@@ -222,6 +113,9 @@ function showfecl3(){
 }
 
 function mixPowder(){
+    document.getElementById('spoon').onclick = false;
+    $('#fillfecl3').show();
+    $('#yellowtag2').show();
     $('#new_spoon').show();
     $('#Fecl3powder').show();
     $('#pointer_spoon').hide();
@@ -231,6 +125,8 @@ function mixPowder(){
 }
 
 function moveSpoon(){
+    $('#fillfecl3').hide();
+    $('#yellowtag2').hide();
     elem = document.getElementById("new_spoon");
     initial_top = Math.round($('#new_spoon').position().top);
     initial_left = Math.round($('#new_spoon').position().left);
@@ -244,22 +140,6 @@ function moveSpoon(){
     
 }
 
-/*
-
-function movefecl3(){
-    elem = document.getElementById("Fecl3powder");
-    initial_top = Math.round($('#Fecl3powder').position().top);
-    initial_left = Math.round($('#Fecl3powder').position().left);
-    final_top=400;
-    step_top=1;
-    step_left=-3;
-    type_of_movement = 0;
-
-    moveImage();
-    
-}
-
-*/
 
 function dropPowder(){
     $('#powder').show();
@@ -292,69 +172,53 @@ function mixSpoon(){
 }
 
 function mixsol(){
-    $('#glassrod').show();
-    img = document.getElementById('glassrod');
+    $('#beaker_with_rod').show();
+    img = document.getElementById('beaker_with_rod');
     var rod = [];
-    rod[0] = "../sprites/DefineSprite_175/1.png";
-    rod[1] = "../sprites/DefineSprite_175/2.png";
-    rod[2] = "../sprites/DefineSprite_175/3.png";
-    rod[3] = "../sprites/DefineSprite_175/4.png";
-    rod[4] = "../sprites/DefineSprite_175/5.png"; 
-    rod[5] = "../sprites/DefineSprite_175/6.png";
-    rod[6] = "../sprites/DefineSprite_175/7.png";
-    rod[7] = "../sprites/DefineSprite_175/8.png";
-    rod[8] = "../sprites/DefineSprite_175/9.png";
-    rod[9] = "../sprites/DefineSprite_175/10.png";
-    rod[10] = "../sprites/DefineSprite_175/11.png";
-    rod[11] = "../sprites/DefineSprite_175/12.png";
-    rod[12] = "../sprites/DefineSprite_175/13.png";
-    rod[13] = "../sprites/DefineSprite_175/14.png";
-    rod[14] = "../sprites/DefineSprite_175/15.png";
-    rod[15] = "../sprites/DefineSprite_175/16.png";
-    rod[16] = "../sprites/DefineSprite_175/17.png";
-    rod[17] = "../sprites/DefineSprite_175/18.png";
-    rod[18] = "../sprites/DefineSprite_175/19.png";
-    rod[19] = "../sprites/DefineSprite_175/20.png";
-    rod[20] = "../sprites/DefineSprite_175/21.png";
-    rod[21] = "../sprites/DefineSprite_175/22.png";
-    rod[22] = "../sprites/DefineSprite_175/23.png";
-    rod[23] = "../sprites/DefineSprite_175/24.png";
-    rod[24] = "../sprites/DefineSprite_175/25.png";
-    rod[25] = "../sprites/DefineSprite_175/26.png";
-    rod[26] = "../sprites/DefineSprite_175/27.png";
-    rod[27] = "../sprites/DefineSprite_175/28.png";
-    rod[28] = "../sprites/DefineSprite_175/29.png";
-    rod[29] = "../sprites/DefineSprite_175/30.png";
-    rod[30] = "../sprites/DefineSprite_175/31.png";
-    rod[31] = "../sprites/DefineSprite_175/32.png";
-    rod[32] = "../sprites/DefineSprite_175/33.png";
-    rod[33] = "../sprites/DefineSprite_175/34.png";
-    rod[34] = "../sprites/DefineSprite_175/35.png";
-    rod[35] = "../sprites/DefineSprite_175/36.png";
-    rod[36] = "../sprites/DefineSprite_175/37.png";
-    rod[37] = "../sprites/DefineSprite_175/38.png";
-    rod[38] = "../sprites/DefineSprite_175/39.png";
-    rod[39] = "../sprites/DefineSprite_175/40.png";
-    rod[40] = "../sprites/DefineSprite_175/41.png";
-    rod[41] = "../sprites/DefineSprite_175/42.png";
-    rod[42] = "../sprites/DefineSprite_175/43.png";
-    rod[43] = "../sprites/DefineSprite_175/44.png";
-    rod[45] = "../sprites/DefineSprite_175/45.png";
-    rod[46] = "../sprites/DefineSprite_175/46.png";
-    rod[47] = "../sprites/DefineSprite_175/47.png";
-    rod[48] = "../sprites/DefineSprite_175/48.png";
-    rod[49] = "../sprites/DefineSprite_175/49.png";
-    rod[50] = "../sprites/DefineSprite_175/50.png";
-    rod[51] = "../sprites/DefineSprite_175/51.png";
-    rod[52] = "../sprites/DefineSprite_175/52.png";
-    rod[53] = "../sprites/DefineSprite_175/53.png";
-    rod[54] = "../sprites/DefineSprite_175/54.png";
-    rod[55] = "../sprites/DefineSprite_175/55.png";
-    rod[56] = "../sprites/DefineSprite_175/56.png";
-    rod[57] = "../sprites/DefineSprite_175/57.png";
-    rod[58] = "../sprites/DefineSprite_175/58.png";
-    rod[59] = "../sprites/DefineSprite_175/59.png";
-    rod[60] = "../sprites/DefineSprite_175/60.png";
+    rod[0] = "../glass_rod/1.png";
+    rod[1] = "../glass_rod/2.png";
+    rod[2] = "../glass_rod/3.png";
+    rod[3] = "../glass_rod/4.png";
+    rod[4] = "../glass_rod/5.png"; 
+    rod[5] = "../glass_rod/6.png";
+    rod[6] = "../glass_rod/7.png";
+    rod[7] = "../glass_rod/8.png";
+    rod[8] = "../glass_rod/9.png";
+    rod[9] = "../glass_rod10.png";
+    rod[10] = "../glass_rod/11.png";
+    rod[11] = "../glass_rod/12.png";
+    rod[12] = "../glass_rod/13.png";
+    rod[13] = "../glass_rod/14.png";
+    rod[14] = "../glass_rod/15.png";
+    rod[15] = "../glass_rod/16.png";
+    rod[16] = "../glass_rod/17.png";
+    rod[17] = "../glass_rod/18.png";
+    rod[18] = "../glass_rod/19.png";
+    rod[19] = "../glass_rod/20.png";
+    rod[20] = "../glass_rod/21.png";
+    rod[21] = "../glass_rod/22.png";
+    rod[22] = "../glass_rod/23.png";
+    rod[23] = "../glass_rod/24.png";
+    rod[24] = "../glass_rod/25.png";
+    rod[25] = "../glass_rod/26.png";
+    rod[26] = "../glass_rod/27.png";
+    rod[27] = "../glass_rod/28.png";
+    rod[28] = "../glass_rod/29.png";
+    rod[29] = "../glass_rod/30.png";
+    rod[30] = "../glass_rod/31.png";
+    rod[31] = "../glass_rod/32.png";
+    rod[32] = "../glass_rod/33.png";
+    rod[33] = "../glass_rod/34.png";
+    rod[34] = "../glass_rod/35.png";
+    rod[35] = "../glass_rod/36.png";
+    rod[36] = "../glass_rod/37.png";
+    rod[37] = "../glass_rod/38.png";
+    rod[38] = "../glass_rod/39.png";
+    rod[39] = "../glass_rod/40.png";
+    rod[40] = "../glass_rod/41.png";
+    rod[41] = "../glass_rod/42.png";
+    rod[42] = "../glass_rod/43.png";
+    rod[43] = "../glass_rod/44.png";
  
 if(z < rod.length)
 {
@@ -365,37 +229,26 @@ z++;
 
 
 function removeSpoon(){
-    $('#spoon').hide();
     $('#glassRod').hide();
+    document.getElementById('instr').innerHTML = "Click on the conical flask containing water, to place it on the magnetic stirrer/heater"
 }
 
 
 function helper(){
 $('#glass_rod_arrow').hide();
 $('#glassRod').hide();
-setTimeout(removeSpoon,4000);
+$('#glassrod').hide();
+$('#beaker').hide();
+$('#orangeLiquid').hide();
+$('#spoon').hide();
+setTimeout(removeSpoon,3000);
 setInterval(mixsol,50);
 setTimeout(heatFlask,3100);
-
-//setTimeout(shiftBeaker,4100);
 }
 
-/*
-function shiftBeaker(){
-    $('#glassrod').hide();
-    elem = document.getElementById("beaker");
-    initial_top = Math.round($('#beaker').position().top);
-    initial_left = Math.round($('#beaker').position().left);
-    final_left = 100;
-    step_top = 0;
-    step_left = -1;
-    type_of_movement = 0;
-    moveImage();
-
-  }
-*/
 
 function heatFlask(){
+    $('#fecl3text').show();
     $('#glassrod').hide()
     $('#conical').show();
     $('#conical_arrow').show();
@@ -420,10 +273,15 @@ function moveConical(){
 }
 
 function showCoin(){
+document.getElementById("instr").innerHTML = "Click on the Magnetic Bead to drop it into the Flask";
 $('#coin').show();
+$('#coin_arrow').show();
+$('#magnetic_bead').show();
 }
 
 function dropCoin(){
+    $('#coin_arrow').hide();
+    $('#magnetic_bead').hide();
     elem = document.getElementById("coin");
     initial_top = Math.round($('#coin').position().top);
     initial_left = Math.round($('#coin').position().left);
@@ -433,19 +291,41 @@ function dropCoin(){
     type_of_movement = 0;
     moveImage();
     $('#heat_btn').show();
+    setTimeout(showArrow,500);
 }
 
+function showArrow(){
+    document.getElementById('instr').innerHTML = "Switch on the Heater of the Magnetic Stirrer & Heater";
+    $('#heat_arrow').show();
+    $('#heat_instr').show();
+}
 
 function red_button(){
+    document.getElementById('heat_btn').onclick = false;
+    document.getElementById('instr').innerHTML = "Switch on the Stirrer of the Magnetic Stirrer & Heater";
     $('#red_btn').show();
+    $('#stirrer_instr').show();
+    $('#stirrer_arrow').show();
+    $('#heat_arrow').hide();
+    $('#heat_instr').hide();
 }
 
 function boilSol1(){
+    document.getElementById('instr').innerHTML = "Wait till Water starts boiling";
+    $('#stirrer_instr').hide();
+    $('#stirrer_arrow').hide();
     setInterval(boilSol,50);
-    setInterval(bubbleSol,200);
-    setTimeout(heaterOff,3000);
+    setTimeout(bubbleSol1,1000);
     $("#heat_btn1").show();
 }
+
+function bubbleSol1(){
+    document.getElementById('instr').innerHTML = "Now that the water gas started boiling,switchoff heater...";
+    setInterval(bubbleSol,200);
+    $('#heat_arrow').show();
+    $('#heat_instr').show();
+}
+
 
 function boilSol(){
     $('#coin').show();
@@ -510,4 +390,99 @@ function bubbleSol(){
 
 function heaterOff(){
     w=-1;
-    }
+    document.getElementById('stirrer_btn').onclick = false;
+    document.getElementById('instr').innerHTML = "Click on the pippet to take 10ml conc. Fecl3 from the Beaker";
+    $('#heat_arrow').hide();
+    $('#heat_instr').hide();
+    $('#red_btn').hide();
+    $('#pippet').show();
+    $('#pippet_sign').show();
+    $('#pippet_arrow').show();
+    $('#heat_btn1').hide();
+}
+
+
+function movePippet(){
+    $('#pippet_sign').hide();
+    $('#pippet_arrow').hide();
+    elem = document.getElementById("pippet");
+    initial_top = Math.round($('#pippet').position().top);
+    initial_left = Math.round($('#pippet').position().left);
+    final_top = 380;
+    step_top = 1;
+    step_left = -0.65;
+    type_of_movement = 0;
+    moveImage();
+    setTimeout(moveBack,4000);
+}
+
+function moveBack(){
+    elem = document.getElementById("pippet");
+    initial_top = Math.round($('#pippet').position().top);
+    initial_left = Math.round($('#pippet').position().left);
+    final_top = 145;
+    step_top = -1;
+    step_left = +0.75;
+    type_of_movement = 1;
+    moveImage();
+    setTimeout(showPippet,2000);
+}
+
+
+function showPippet(){
+    document.getElementById('instr').innerHTML = "Click on the pipette again to add the FeCl3 taken from the beaker, to the hot water in conical flask, drop by drop......";
+    $('#pippet1').show();
+    $('#pippet').hide();
+}
+
+function movePippet2(){
+    elem = document.getElementById("pippet1");
+    initial_top = Math.round($('#pippet1').position().top);
+    initial_left = Math.round($('#pippet1').position().left);
+    final_top = 200;
+    step_top = 1;
+    step_left = 3;
+    type_of_movement = 0;
+    moveImage();
+    setTimeout(showDrop,2000);
+}
+
+function showDrop(){
+    document.getElementById('instr').innerHTML = "Click on the Add again to add the FeCl3 taken from the beaker, to the hot water in conical flask, drop by drop......";
+    $('#drop').show();
+}
+
+function moveDrop(){
+    elem = document.getElementById("drop");
+    initial_top = Math.round($('#drop').position().top);
+    initial_left = Math.round($('#drop').position().left);
+    final_top = 370;
+    step_top = 1;
+    step_left = 0;
+    type_of_movement = 0;
+    moveImage();
+    $('#red_flask').show();
+    $('#feohSol').show();
+    document.getElementById('instr').innerHTML = "the Sol is Thus obtained";
+}
+
+function showSol(){
+    $('#round').show();
+    moveSol();
+}
+
+
+function moveSol(){
+    $('#bbl1').show();
+    $('#bbl2').show();
+    $('#bbl3').show();
+    $('#bbl4').show();
+    $('#bbl5').show();
+}
+
+
+
+
+
+
+
