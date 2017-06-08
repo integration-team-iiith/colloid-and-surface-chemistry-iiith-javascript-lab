@@ -21,15 +21,15 @@ h3{
 
 #change{
 	color: #7CFC00;
-	font-size: 18px;
+	font-size: 17px;
 	text-align: center;
 	padding-top: 5px;
 }
 
 #beaker{
 	position: absolute;
-	left: 25%;
-	top: 120%;
+	left: 23%;
+	top: 100%;
 	z-index: 1;
 }
 
@@ -37,13 +37,13 @@ h3{
 	position: absolute;
 	top: 255%;
 	left: 21%;
-	z-index: 2;
+	z-index: 10;
 }
 
 #B_arrow{
 	position: absolute;
 	left: 30%;
-	top: 120%;
+	top: 130%;
 	z-index: 1;
 }
 
@@ -64,8 +64,8 @@ h3{
 
 #B_water{
 	position: absolute;
-	z-index: 2;
-	top: 298%;
+	z-index: 5;
+	top: 305%;
 	left: 41.7%;
 	opacity: 0.3;
 	-webkit-filter: grayscale(100%);
@@ -136,7 +136,7 @@ h3{
 	position: absolute;
 	top: 243%;
 	left: 43%;
-	z-index: 5;
+	z-index: 7;
 	display: none;
 }
 
@@ -239,14 +239,14 @@ h3{
 #button1{
 	position: absolute;
 	height: 12%;
-	z-index: 4;
+	z-index: 11;
 	top: 270.4%;
 	left: 58.9%;
 }
 
 #button2{
 	position: absolute;
-	z-index: 4;
+	z-index: 11;
 	top: 270.7%;
 	left: 69.1%;
 	height: 12%;
@@ -262,7 +262,7 @@ h3{
 
 #heat_arrow{
 	position: absolute;
-	z-index: 4;
+	z-index: 11;
 	top: 143%;
 	left: 63%;
 	display: none;
@@ -280,7 +280,7 @@ h3{
 
 #stir_arrow{
 	position: absolute;
-	z-index: 4;
+	z-index: 11;
 	top: 161%;
 	left: 58%;
 	display: none;
@@ -301,6 +301,8 @@ h3{
 	display: none;
 	left: 61.7%;
 	top: 231%;
+	opacity: 0.7;
+	-webkit-filter: grayscale(40%);
 	z-index: 10;
 }
 
@@ -317,6 +319,7 @@ h3{
 
 #pipette{
 	position: absolute;
+	z-index: 7;
 	top: 100%;
 	left: 49%;
 	opacity: 0.6;
@@ -341,3 +344,49 @@ h3{
 	display: none;
 }
 
+#red_sol{
+	position: absolute;
+	left: 45.8%;
+	width: 3.9%;
+	top: 304%;
+	z-index: 4;
+	display: none;
+}
+
+#red_drop{
+	position: absolute;
+	display: none;
+	height: 10%;
+	top: 172%;
+	left: 62.92%;
+}
+
+#pip2_arrow{
+	position: absolute;
+	left: 28.6%;
+	width: 33%;
+	top: 130%;
+	display: none;
+
+}
+
+#red_flask{
+	position: absolute;
+	left: 61%;
+	top: 210.3%;
+	display: none;
+}
+
+#feoh3_txt{
+	position: absolute;
+	color: #e50000;
+	top: 210.3%;
+	left: 65%;
+	font-size: 18px;
+	display: none;
+}
+
+#circle{
+	position: absolute;
+	display: none;
+}

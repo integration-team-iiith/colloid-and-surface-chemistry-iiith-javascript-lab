@@ -98,6 +98,9 @@ function addclickEvents(){
     document.getElementById("pipette").addEventListener("click",function(){
     	callPipette();
     },false)
+    document.getElementById("red_flask".addEventListener("click",function(){
+    	callCircle();
+    },false)
 }
 
 function beakr(){
@@ -108,7 +111,7 @@ function beakr(){
         initial_left = Math.round($('#beaker').position().left);
         step_top=1;
         step_left=1;
-        final_top=387;
+        final_top=361;
         type_of_movement=0;
         $("#B_arrow").hide();
         $("#beak").hide();
@@ -190,11 +193,9 @@ function wtag(){
     final_top=398;
     type_of_movement=1;
     moveImage();
-    setTimeout(stop,1100);
-}
-
-function stop(){
+    setTimeout(function(){
 	$("#water_tag").hide();
+    },1100);
 }
 
 function showFecl3(){
@@ -211,13 +212,12 @@ function Powder(){
 	$("#B_water").hide();
 	$("#beak_spoon").show();
 	$("#rd").show();
-	setTimeout(delaySpoon,2000);	
-}
-
-function delaySpoon(){
+	setTimeout(function(){
 	x=1;
 	id5=setInterval(callSpoon,100);
+	},2000);	
 }
+
 function callSpoon(){
 	i=1;
 	img=document.getElementById('beak_spoon');
@@ -235,17 +235,15 @@ function callSpoon(){
 		$("#fecl3_powder").hide();
 		$("#powder_arrow").hide();
 		$("#fecl3_text").hide();
-		setTimeout(showRod,1000);
+		setTimeout(function(){
+			$("#rod").show();
+			$("#rd").hide();
+			$("#g_txt").show();
+			$("#g_arrow").show();
+			$("#change").html("Click on the Glass Rod to stir the FeCl<sub>3</sub> Soultion....")
+		},1000);
 	}
 	
-}
-
-function showRod(){
-	$("#rod").show();
-	$("#rd").hide();
-	$("#g_txt").show();
-	$("#g_arrow").show();
-	$("#change").html("Click on the Glass Rod to stir the FeCl<sub>3</sub> Soultion....")
 }
 
 function callRod(){
@@ -288,53 +286,49 @@ function moveFullBeak(){
 	initial_top = Math.round($("#beak_spoon").position().top);
     initial_left = Math.round($("#beak_spoon").position().left);
     step_top=0;
-    step_left=-0.5;
+    step_left=-0.7;
     final_top=0;
     final_left=390;
     type_of_movement=3;
     elem=document.getElementById("beak_spoon");
     moveImage();
-    setTimeout(display,2000);
-}
-
-function display(){
-	$("#div_fecl3").show();
+    setTimeout(function(){
+    $("#div_fecl3").show();
 	$("#con_arrow").show();
 	$("#water_flask").show();
 	$("#con_flask").show();
 	$("#change").html("Click on the Conical Flask containing Water, to Place it on the Magnetic Stirrer/Heater");
+    },2000);
 }
 
 function callConFlsk(){
 	if(step_no==2){
 	initial_top = Math.round($("#water_flask").position().top);
     initial_left = Math.round($("#water_flask").position().left);
-    step_top=0.5;
+    step_top=1;
     step_left=0;
     final_top=278;
     final_left=0;
     type_of_movement=0;
     elem=document.getElementById("water_flask");
     moveImage();
-    setTimeout(Show_func,2000);
+    setTimeout(function(){
+    $("#magnet").show();
+	$("#mag_arrow").show();
+	$("#mag_txt").show();
+	$("#change").html("Click on the Magnetic Bead to drop it into the Flask....")
+    },1100);
     step_no++;
 	$("#con_arrow").hide();
 	$("#con_flask").hide();
 	}
 }
 
-function Show_func(){
-	$("#magnet").show();
-	$("#mag_arrow").show();
-	$("#mag_txt").show();
-	$("#change").html("Click on the Magnetic Bead to drop it into the Flask....")
-}
-
 function callMagnet(){
 	if(step_no==3){
 	initial_top = Math.round($("#magnet").position().top);
     initial_left = Math.round($("#magnet").position().left);
-    step_top=0.5;
+    step_top=1;
     step_left=0;
     final_top=354;
     final_left=0;
@@ -344,15 +338,14 @@ function callMagnet(){
     step_no++;
 	$("#mag_arrow").hide();
 	$("#mag_txt").hide();
-	setTimeout(showHeat,2000);
-	}
-}
-
-function showHeat(){
+	setTimeout(function(){
 	$("#change").html("Switch on the Heater of the Magnetic Stirrer & Heater ...");
 	$("#heat_arrow").show();
 	$("#heat_txt").show();
+		},1100);
+	}
 }
+
 function callButton2(){
 	if(step_no==4){
 	$("#red_button").show();
@@ -388,13 +381,27 @@ function callButton2(){
  	   	elem=document.getElementById("beak_spoon");
    		moveImage();
    		step_no++;
+   		setTimeout(function(){
+   			$("#div_fecl3").css("left","37.446%");
+   			$("#div_fecl3").show();
+   			$("#beaker").css("left","43.09%");
+   			$("#beaker").css("top","256.4%");
+   			$("#beaker").show();
+   			$("#red_sol").show();
+   			$("#beak_spoon").hide();
+   			$("#B_water").css("left","45.8%");
+   			$("#B_water").show();
+   		},1700)
 	}
 }
 
 function callButton1(){
 	if(step_no==5){
 		x=1;
-		setTimeout(boil,3000);
+		setTimeout(function(){
+			$("#heat_bubb").show();
+			id4=setInterval(boil_water,150)
+		},3000);
 		$("#stir_arrow").hide();
 		$("#stir_txt").hide();
 		step_no++;
@@ -402,12 +409,6 @@ function callButton1(){
 		$("#change").html("Wait till the water starts boiling.....");
 		$("#mag").show();
 	}
-}
-
-function boil(){
-	console.log("yes");
-	$("#heat_bubb").show();
-	id4=setInterval(boil_water,150)
 }
 
 function boil_water(){
@@ -426,7 +427,6 @@ function boil_water(){
 	x++;
 	if(x<water.length)
 	{
-		console.log("x")
 		img.src=water[x];
 	}
 	if(x==10){
@@ -449,5 +449,83 @@ function callPipette(){
   		type_of_movement=0;
  	   	elem=document.getElementById("pipette");
    		moveImage();
+   		setTimeout(function(){
+   			$("#pip_txt").hide();
+   			$("#pip_arrow").hide();
+   		},50)
+   		setTimeout(function(){
+   		initial_top = Math.round($("#red_sol").position().top);
+    	initial_left = Math.round($("#red_sol").position().left);	
+	    step_top=0.4;
+ 	   	step_left=0;
+   		final_top=447;
+   		final_left=0;
+  		type_of_movement=0;
+ 	   	elem=document.getElementById("red_sol");
+   		moveImage();
+   		},1200)
+   		setTimeout(function(){
+   		initial_top = Math.round($("#pipette").position().top);
+    	initial_left = Math.round($("#pipette").position().left);	
+	    step_top=-1;
+ 	   	step_left=0.2;
+   		final_top=142;
+   		final_left=100;
+  		type_of_movement=1;
+ 	   	elem=document.getElementById("pipette");
+   		moveImage();
+   		},2000)
+   		setTimeout(function(){
+   			$("#pip_txt").show();
+   			$("#pip_arrow").show();
+   			$("#change").html("Click on the pipette again to add the FeCl<sub>3</sub> taken from the beaker, to the hot water in conical flask, drop by drop.....")
+   		},4500)
+   		console.log(step_no);
+   	}
+   		else if(step_no==8)
+   	{
+   		step_no++;
+   		$("#pip_txt").hide();
+   		$("#pip_arrow").hide();
+   		initial_top = Math.round($("#pipette").position().top);
+    	initial_left = Math.round($("#pipette").position().left);	
+	    step_top=0.1;
+ 	   	step_left=1.4;
+   		final_top=152;
+   		final_left=100;
+  		type_of_movement=0;
+ 	   	elem=document.getElementById("pipette");
+   		moveImage();
+   		setTimeout(function(){
+   			$("#red_drop").show();
+   			$("#pip2_arrow").show();
+   			$("#pip_txt").css("left","26%");
+   			$("#pip_txt").css("top","239%");
+   			$("#pip_txt").show();
+   		},1000)
 	}
+	else if(step_no==9){
+		step_no++;
+		initial_top = Math.round($("#red_drop").position().top);
+    	initial_left = Math.round($("#red_drop").position().left);	
+	    step_top=0.6;
+ 	   	step_left=0;
+   		final_top=340;
+   		final_left=100;
+  		type_of_movement=0;
+ 	   	elem=document.getElementById("red_drop");
+   		moveImage();
+   		setTimeout(function(){
+   			$("#red_flask").show();
+   			$("#mag").css("opacity","0.07")
+   			$("#pip_txt").hide();
+   			$("#pip2_arrow").hide();
+   			$("#feoh3_txt").show();
+   			$("#change").html("The colloid is thus obtained.....")
+   		},1000)
+	}
+}
+
+function callCircle(){
+	
 }
