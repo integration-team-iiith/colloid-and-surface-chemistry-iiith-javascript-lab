@@ -125,16 +125,16 @@ function beakr(){
 }
 
 function callFlask(){
-		elem=document.getElementById("flask");
-		$("#flask").show();
-		initial_top = Math.round($("#flask").position().top);
-        initial_left = Math.round($("#flask").position().left);
-        step_top=-0.5;
-        step_left=0;
-        final_top=260;
-        type_of_movement=1;
-        moveImage();
-        id1 = setInterval(flaskEmpty,50);
+	elem=document.getElementById("flask");
+	$("#flask").show();
+	initial_top = Math.round($("#flask").position().top);
+    initial_left = Math.round($("#flask").position().left);
+    step_top=-0.5;
+    step_left=0;
+    final_top=260;
+    type_of_movement=1;
+    moveImage();
+    id1 = setInterval(flaskEmpty,50);
 }
 
 function flaskEmpty(){
@@ -539,7 +539,28 @@ function callCircle(){
 			$("#circle").css("left","36%");
 			$("#circle").css("top","124%");
 			$("#coll_bubb").show();
+			x=1;
+			id7=setInterval(moveBubb,50);
 		},50);
 
 	}
+}
+
+function moveBubb(){
+	img=document.getElementById("coll_bubb");
+	var bubb=[]
+	for(i=1;i<=48;i++)
+	{
+		bubb[i]="img_exp1/trans_bubb/" + i + ".png";
+	}
+	if(x<bubb.length)
+	{
+		img.src=bubb[x];
+		x++;
+	}
+	else
+	{
+		x=1;
+	}
+
 }
