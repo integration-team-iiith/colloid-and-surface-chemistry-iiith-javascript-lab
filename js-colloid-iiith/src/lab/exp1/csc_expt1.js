@@ -20,6 +20,7 @@ function initial_function(){
 	$("#B_arrow").rotate({angle:345});
 	$("#g_arrow").rotate({angle:30});
 	$("#con_arrow").rotate({angle:17});
+	addPointer(beaker);
 }
 
 function changeText(){
@@ -77,6 +78,14 @@ function moveImage(){
     } 
 }
 
+function addPointer(Id){
+	$(Id).css("cursor","pointer");
+}
+
+
+function removePointer(Id){
+	$(Id).css("cursor","auto");
+}
 
 //This function adds click events to all clickable objects
 function addclickEvents(){
@@ -131,6 +140,8 @@ function beakr(){
         step_no++;
         setTimeout(changeText,6500);
         setTimeout(showFecl3,6400);
+        removePointer(beaker);
+        addPointer(fecl3_powder);
     }
 }
 
@@ -236,6 +247,8 @@ function Powder(){
 	$("#B_water").hide();
 	$("#beak_spoon").show();
 	$("#rd").show();
+	removePointer(fecl3_powder);
+	addPointer(rod);
 	setTimeout(function(){
 	x=1;
 	id5=setInterval(callSpoon,100);
@@ -284,6 +297,8 @@ function callRod(){
 		x=2;
 		setTimeout(moveFullBeak,5000);
 		step_no++;
+		removePointer(rod);
+		addPointer(water_flask);
 	}
 }
 
@@ -356,6 +371,8 @@ function callConFlsk(){
     step_no++;
 	$("#con_arrow").hide();
 	$("#con_flask").hide();
+	removePointer(water_flask);
+	addPointer(magnet);
 	}
 }
 
@@ -382,7 +399,10 @@ function callMagnet(){
 	$("#heat_arrow").show();
 	$("#heat_txt").show();
 		},1100);
+	removePointer(magnet);
+	addPointer(button2);
 	}
+
 }
 
 //This function is called when the heater button is clicked.
@@ -397,10 +417,14 @@ function callButton2(){
 	$("#stir_txt").show();
 	$("#change").html("Switch on the Stirrer of the Magnetic Stirrer & Heater ...");
 	step_no++;
+	removePointer(button2);
+	addPointer(button1);
 	}
 	//Moves the beaker from the edge of table towards the center.
 	else if(step_no ==6){
 		clearInterval(id4);
+		removePointer(button2);
+		addPointer(pipette);
 		$("#heat_arrow").hide();
 		$("#heat_txt").hide();
 		$("#heat_bubb").hide();
@@ -455,6 +479,8 @@ function callButton1(){
 		$("#magnet").hide();
 		$("#change").html("Wait till the water starts boiling.....");
 		$("#mag").show();
+		removePointer(button1);
+		addPointer(button2);
 	}
 }
 
@@ -589,6 +615,8 @@ function callPipette(){
    			$("#feoh3_txt").show();
    			$("#change").html("The colloid is thus obtained.....")
    		},1000)
+   		removePointer(pipette);
+   		addPointer(red_flask);
 	}
 }
 
@@ -598,6 +626,7 @@ function callCircle(){
 	if(step_no==10){
 		//Shows the small circle
 		$("#circle").show();
+		removePointer(red_flask);
 		//Shows the medium circle after 50ms
 		setTimeout(function(){
 			$("#circle").attr("src","img_exp1/shapes/circle2.png");
