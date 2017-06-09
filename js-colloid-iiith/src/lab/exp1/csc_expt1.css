@@ -13,6 +13,9 @@ h3{
 }
 
 .narr{
+	/*position: absolute;*/
+	/*top: 73%;*/
+	/*left: 23%;*/
 	background-color:#000;
 	width: 50%;
 	height:50px;
@@ -21,7 +24,7 @@ h3{
 
 #change{
 	color: #7CFC00;
-	font-size: 17px;
+	font-size: 16px;
 	text-align: center;
 	padding-top: 5px;
 }
@@ -394,6 +397,13 @@ h3{
 }
 
 #coll_bubb{
+	position: absolute;
+	left: 40%;
+	top: 150%;
+	display: none;
+}
+
+#coll{
 	position: absolute;
 	left: 40%;
 	top: 150%;
