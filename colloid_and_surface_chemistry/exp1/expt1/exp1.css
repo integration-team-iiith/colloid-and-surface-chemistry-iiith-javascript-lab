@@ -235,8 +235,8 @@ h3{
 #black_strip{
     position: absolute;
     left: 20%;
-    top: 10%;
-    width: 80%;
+    top: 8%;
+    width: 90%;
 }
 
 #bubble_in_mgnt{
@@ -264,7 +264,7 @@ h3{
 
 #heat_arrow{
     position: absolute;
-    top: 31%;
+    top: 32%;
     left: 68%;
     display: none;
 }
