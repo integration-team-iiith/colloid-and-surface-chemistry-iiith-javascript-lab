@@ -447,6 +447,8 @@ function movePippet2(){
     setTimeout(showDrop,2000);
 }
 
+
+
 function showDrop(){
     document.getElementById('instr').innerHTML = "Click on the drop Add again to add the FeCl3 taken from the beaker, to the hot water in conical flask, drop by drop......";
     $('#drop').show();
