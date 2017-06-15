@@ -13,7 +13,12 @@ h3{
 }
 
 #content{
+	/*position: absolute;*/
+	/*left: 20%;*/
 	align-content: center;
+	/*width: 1500px;*/
+	/*height: 1500px;*/
+	/*z-index: -1;*/
 }
 
 #expt_table{
@@ -50,9 +55,9 @@ h3{
 #flsk{
 	position: absolute;
 	top: 13%;
-	left: -35%;
-	height: 18%;
-	z-index: 3;
+	left: 19.5%;
+	height: 13%;
+	z-index: 10;
 }
 
 #fl_txt{
@@ -71,7 +76,7 @@ h3{
 	font-weight: bold;
 	color: #ffffff;
 	font-size: 8px;
-	z-index: 4;
+	z-index: 5;
 }
 
 #salt_txt{
@@ -87,7 +92,7 @@ h3{
 	position: absolute;
 	left: 28%;
 	top: 14%;
-	z-index: 3;
+	z-index: 4;
 	height: 9%;
 }
 
@@ -122,7 +127,7 @@ h3{
 	position: absolute;
 	left: 35%;
 	top: 14%;
-	z-index: 3;
+	z-index: 4;
 	height: 9%;
 }
 
@@ -133,7 +138,7 @@ h3{
 	font-weight: bold;
 	color: #ffffff;
 	font-size: 8px;
-	z-index: 4;
+	z-index: 5;
 
 }
 
@@ -148,10 +153,10 @@ h3{
 
 #feoh{
 	position: absolute;
-	height: 18%;
+	height: 13%;
 	z-index: 3;
-	left: -8%;
-	top: 13%;
+	left: 46%;
+	top: 12%;
 }
 
 #feoh_txt{
@@ -165,10 +170,10 @@ h3{
 
 #ag{
 	position: absolute;
-	height: 18%;
+	height: 13%;
 	z-index: 3;
-	left: -1.5%;
-	top: 13%;
+	left: 52%;
+	top: 12%;
 }
 
 #ag_txt{
@@ -195,6 +200,7 @@ h3{
 	top: 1%;
 	z-index: 3;
 	height: 73%;
+	opacity: 0.9;
 }
 
 #beak_txt{
@@ -205,11 +211,315 @@ h3{
 	color: #ffffff;
 	text-align: center;
 	width: 12.3%;
-	opacity: 0.6;
 }
 
 #reset_btn{
 	position: absolute;
 	top: 90%;
 	left: 55%;
+}
+
+#main_beak{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+}
+
+#beak1{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak2{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak3{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak4{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak5{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak6{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#back1{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 20.5%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back2{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 27%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back3{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 34%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back4{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 20.5%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back5{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 20.5%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back6{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 20.5%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#flask1{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 89%;
+    top: 40%;
+}
+
+#arrow1{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 75%;
+    top: 40%;
+}
+
+#ar1_txt{
+	position: absolute;
+	left: 75%;
+	top: 40%;
+	font-size: 14px;
+	display: none;
+}
+
+#beak1_water{
+	position: absolute;
+	opacity: 0.8;
+	-webkit-filter: grayscale(100%);
+	z-index: 11;
+	top: 61%;
+	left: 86%;
+	width: 6%;
+}
+
+#tag1{
+	position: absolute;
+	top: 59%;
+	left: 84%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#water_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 87%;
+	display: none;
+	z-index: 13;
+	font-weight: bold;
+}
+
+#arrow2{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 20.2%;
+    top: 40.5%;
+    height: 5.3%;
+}
+
+#ar2_txt{
+	position: absolute;
+	left: 21%;
+	top: 40%;
+	font-size: 14px;
+	width: 15%;
+	display: none;
+}
+
+#flask2{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 32%;
+    top: 40%;
+}
+
+#beak2_water{
+	position: absolute;
+	opacity: 0.8;
+	-webkit-filter: grayscale(100%);
+	z-index: 11;
+	top: 61%;
+	left: 28%;
+	width: 6%;
+}
+
+#ar3_txt{
+	position: absolute;
+	left: 44%;
+	top: 38%;
+	font-size: 18px;
+	width: 18%;
+	display: none;
+	z-index: 20;
+}
+
+#rod1{
+	position: absolute;
+	z-index: 30;
+	left: 23%;
+	top:45%;
+	width: 14%;
+	display: none;
+}
+
+#tag2{
+	position: absolute;
+	top: 59%;
+	left: 25.9%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#salt2_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 27%;
+	display: none;
+	z-index: 13;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#arrow4{
+	position: absolute;
+    display: none;
+    left: 50%;
+    top: 35%;
+    height: 5.3%;
+}
+
+#ar4_txt{
+	position: absolute;
+	left: 51%;
+	top: 35.5%;
+	font-size: 14px;
+	width: 15%;
+	display: none;
+}
+
+#flask3{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 42%;
+    top: 40%;
 }
