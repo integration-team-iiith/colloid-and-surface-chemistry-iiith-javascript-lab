@@ -1,0 +1,1601 @@
+
+#+title: Experiment-5 
+#+SETUPFILE: ../../org-templates/level-2.org
+#+EXCLUDE_TAGS: boilerplate
+#+PROPERTY: session *scheme*
+#+PROPERTY: results output
+#+PROPERTY: exports code
+#+TAGS: boilerplate(b) notes(n) solution(s)
+#+AUTHOR: K.L.MaheeSurya
+
+* Experiment-5
+** Experiment-5 HTML 
+*** Head
+    It contains the script sources and css,bootstrap sources and the title.
+#+name: HTML File
+#+BEGIN_SRC html :tangle expt-5.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<title>Tyndal Effect</title>
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="csc_expt5.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<!-- Latest compiled JavaScript -->	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Custom JavaScript file -->
+	<script src="csc_expt5.js"></script>
+	<!-- Google Analytics Code starts here -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-42255654-1', 'virtual-labs.ac.in');
+  ga('send', 'pageview');
+</script>
+</head>
+#+END_SRC
+
+*** Body
+#+name: HTML File
+#+BEGIN_SRC html :tangle expt-5.html
+<body>
+	<center id="content">
+		<div id="header">
+			Demonstration of Tyndal Effect
+		</div>
+		<div class="w3-container">
+			<img id="expt_table" src="images/shapes/108.png">
+			<img id="table" src="images/sprites/Table/table.png">
+			<img id="flsk" src="images/sprites/water_flasks/0.png">
+			<p id="fl_txt">Water</p>
+			<p id="salt_shrt">salt</p>
+			<p id="salt_txt">Salt</p>
+			<img id="salt" src="images/shapes/142.png">
+			<img id="sgr" src="images/shapes/142.png">
+			<img id="dtr" src="images/shapes/142.png">
+			<p id="sgr_shrt">sugar</p>
+			<p id="sgr_txt">Sugar</p>
+			<p id="dtr_shrt">Detergent</p>
+			<p id="dtr_txt">Detergent</p>
+			<img id="feoh" src="images/sprites/feoh_flasks/0.png">
+			<p id="feoh_txt">Fe(OH)<sub>3</sub></p>
+			<img id="ag" src="images/sprites/ag_flasks/x.png">
+			<img id="main_beak" src="images/sprites/sugar_salt/0.png">
+			<p id="ag_txt">Ag-colloid</p>
+			<img id="beak_tabl" src="images/sprites/beaker_table/0.png">
+			<img id="beak1" src="images/sprites/sugar_salt/0.png">
+			<img id="beak2" src="images/sprites/sugar_salt/0.png">
+			<img id="beak3" src="images/sprites/sugar_salt/0.png">
+			<img id="beak4" src="images/sprites/sugar_salt/0.png">
+			<img id="beak5" src="images/sprites/sugar_salt/0.png">
+			<img id="beak6" src="images/sprites/sugar_salt/0.png">
+			<p id="beak_txt">Beaker</p>
+			<img id="back1" src="images/shapes/124.png">
+			<img id="flask1" src="images/sprites/water_flasks/0.png">
+			<img id="arrow1" src="images/sprites/ya_bl/0.png">
+			<p id="ar1_txt">Adding water into beaker</p>
+			<img id="beak1_water" src="images/sprites/water_beak/0.png">
+			<img id="tag1" src="images/sprites/tag/0.png">
+			<p id='water_txt'>Water</p>
+			<img id="back2" src="images/shapes/124.png">
+			<img id="arrow2" src="images/sprites/ya_bl/0.png">
+			<p id="ar2_txt">Adding pure water into beaker</p>
+			<img id="flask2" src="images/sprites/water_flasks/0.png">
+			<img id="beak2_water" src="images/sprites/water_beak/0.png">
+			<p id="ar3_txt">Adding Salt into beaker</p>
+			<img id="rod1" src="images/sprites/stirring/0.png">
+			<img id="tag2" src="images/sprites/tag/0.png">
+			<p id='salt2_txt'>Salt solution</p>
+			<img id="back3" src="images/shapes/124.png">
+			<img id="arrow4" src="images/sprites/ya_bl/0.png">
+			<p id="ar4_txt">Adding water into beaker</p>
+			<img id="flask3" src="images/sprites/water_flasks/0.png">
+			<img id="beak3_water" src="images/sprites/water_beak/0.png">
+			<p id="ar5_txt">Adding Sugar into beaker</p>
+			<img id="rod2" src="images/sprites/stirring/0.png">
+			<p id='sugar_txt'>Sugar solution</p>
+			<img id="tag3" src="images/sprites/tag/0.png">
+			<img id="back4" src="images/shapes/124.png">
+			<p id="ar6_txt">Adding pure water into beaker</p>
+			<img id="arrow5" src="images/sprites/ya_bl/0.png">
+			<img id="flask4" src="images/sprites/water_flasks/0.png">
+			<img id="beak4_water" src="images/sprites/water_beak/0.png">
+			<p id="ar7_txt">Adding Soap into beaker</p>
+			<img id="rod3" src="images/sprites/stirring/0.png">
+			<p id='deter_txt'>Soap solution</p>
+			<img id="tag4" src="images/sprites/tag/0.png">
+			<img id="back5" src="images/shapes/124.png">
+			<img id="flask5" src="images/sprites/feoh_flasks/0.png">
+			<img id="arrow6" src="images/sprites/ya_bl/0.png">
+			<p id="ar8_txt">Adding Fe(OH)<sub>3</sub> colloid into beaker</p>
+			<img id="beak5_water" src="images/sprites/water_beak/0.png">
+		</div>
+			<!-- The Reset Button -->
+		<input id="reset_btn" type="button" value="Reset Experiment">
+	</center>
+</body>
+</html>
+#+END_SRC
+
+** Experiment-5 JS 
+   I implemented the JS using design pattern of MVC.
+
+*** Model
+   The model contains all the instructions. 
+
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+var model={
+
+	instruction1:'1. Select water from the apparatus.',
+	instruction2:'2. Make a salt solution using the salt container in the apparatus.',
+	instruction3:'3. Make a sugar solution using the sugar container in the apparatus.',
+	instruction4:'4. Make a soap solution using the detergent in the apparatus.',
+	instruction5:'5. Make a Fe(OH)<sub>3</sub> colloid using the Fe(OH)<sub<3</sub> in the apparatus.',
+	instruction6:'6. Make an Ag colloid using the Ag in the apparatus.',
+	instruction7:'7. Tyndal effect is observed when light is passed through the solution.' 
+	   		+	'Click on any of the beakers for detailed observtion.',
+};
+#+END_SRC
+
+*** View
+     View contains all variables and functions. 
+**** Variables
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+var view={
+       //All the required variables are defined
+	step_no:0,
+	x:0,
+	y:0,
+	z:0,
+	a:0,
+	b:0,
+	c:0,
+#+END_SRC
+
+**** SetInnerHTML function
+     Calls the method to set innerHTML of an element.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	// setInnerHtml: Calls this method to set the innerText to an element.
+	setInnerHTML: function (id, innerHTML) {
+		document.getElementById(id).innerHTML = innerHTML;
+	},
+#+END_SRC
+
+**** AddClickEvent function
+     adds click events to a given id.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	// addClickEvent: Calls this method to add EventListener to an element.
+	addClickEvent: function(id, method){
+		var element = document.getElementById(id);
+		element.addEventListener('click', method);
+	},
+#+END_SRC
+
+**** removeClickEvent
+     Removes click event for a given ID.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	//removeClickEvent: Calls this method to remove EventListener for an element.
+	removeClickEvent: function(id){
+	    document.getElementById(id).style.pointerEvents = 'none';
+	},
+#+END_SRC
+
+**** EnableClickEvent
+     Enables click event for a given ID.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	//enableClickEvent: Calls this method to enable EventListener for an element.
+  	enableClickEvent: function(id){
+    	document.getElementById(id).style.pointerEvents = 'auto';
+  	},
+#+END_SRC
+
+**** AnimateDirection-1
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+     animates an object in a straight line
+	// animateDirection_1: Calls this method to move an element in a straight line.
+	animateDirection_1: function(id,top,left,time){
+		$('#'+id).animate({
+			top: top+'%', 
+			left: left+'%'
+		}, {
+			duration: time
+		});
+	},
+#+END_SRC
+
+**** ResetPage
+     Reloads the page
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	// resetPage: Calls this method to reset the page on clicking the button.
+	resetPage: function(){
+		location.reload();
+	},
+#+END_SRC
+
+**** ActivateEvents
+     Activates all the click events on the page
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	/* activateEvents: Calls this method to add EventListener to an elements. When an element is 
+	clicked corresponding function gets executed. */
+	activateEvents: function() {
+		this.addClickEvent('reset_btn', function() { view.resetPage(); });
+		this.addClickEvent('flsk',function(){ view.water();});
+		this.addClickEvent('salt',function(){ view.callSalt();});
+		this.addClickEvent('sgr',function(){ view.callSugar();});
+		this.addClickEvent('dtr',function(){ view.callDeter();});
+		this.addClickEvent('feoh',function(){ view.callFeoh();});
+	},
+#+END_SRC
+
+**** Water
+     This method is called when water flask is clicked. It animates a beaker
+	onto the table, animates a flask pouring water into the beaker and the
+	beaker getting filled up.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	water: function(){
+		if(this.step_no == 0)
+		{
+			$("#back1").show();
+			$("#beak1").show();
+			this.animateDirection_1('beak1', '+=38', '-=5', '1000');
+			this.step_no++;
+			setTimeout(function(){
+			$("#flask1").show();
+			$("#arrow1").show();
+			$("#ar1_txt").show();
+			},1000);
+			setTimeout(function(){
+				this.x=1;
+				$("#arrow1").hide();
+				$("#ar1_txt").hide();
+				time1=setInterval(function(){
+					images=[];
+					for(i=1;i<=69;i++)
+					{
+						images[i]= "images/sprites/water_flasks/"  + i + ".png";
+					}
+					if(this.x<images.length)
+					{
+						$("#flask1").attr("src",images[this.x]);
+					}
+					this.x++;
+					if(this.x ==70){
+						$("#flask1").hide();
+						clearInterval(time1);
+					}
+				},50);
+			},3000);
+			setTimeout(function(){
+				this.y=1;
+				time2=setInterval(function(){
+					water=[];
+					for(j=0;j<=48;j++)
+					{
+						water[j]="images/sprites/water_beak/" + j + ".png";
+					}
+					if(this.y<water.length){
+						$("#beak1_water").attr("src",water[this.y]);
+					}
+					this.y++;
+					if(this.y == 49){
+						clearInterval(time2);
+						$("#tag1").show();
+						$("#water_txt").show();
+						setTimeout(function(){
+							view.animateDirection_1('tag1', '-=3', '-=0', '1000');
+						},500);
+						setTimeout(function(){
+							view.animateDirection_1('water_txt', '-=3', '-=0', '1000');
+						},500);
+					}
+				},50)
+			},2800)
+		}
+	},
+#+END_SRC
+
+**** callSalt
+     This method is called when salt box is clicked. It animates a beaker onto
+	the table, pours water from flask into the beaker, fills the beaker,
+	adds salt to the beaker and stirrs the beaker.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	callSalt: function(){
+		if(this.step_no == 1)
+		{
+			$("#back2").show();
+			$("#beak2").show();
+			this.animateDirection_1('beak2', '+=38', '-=63', '1000');
+			this.step_no++;
+			setTimeout(function(){
+			$("#flask2").show();
+			$("#arrow2").show();
+			$("#ar2_txt").show();
+			},1000);
+			setTimeout(function(){
+				this.x=1;
+				$("#arrow2").hide();
+				$("#ar2_txt").hide();
+				time3=setInterval(function(){
+					images=[];
+					for(i=1;i<=69;i++)
+					{
+						images[i]= "images/sprites/water_flasks/"  + i + ".png";
+					}
+					if(this.x<images.length)
+					{
+						$("#flask2").attr("src",images[this.x]);
+					}
+					this.x++;
+					if(this.x ==70){
+						$("#flask2").hide();
+						clearInterval(time3);
+					}
+				},50);
+			},3000);
+			setTimeout(function(){
+				this.y=1;
+				time4=setInterval(function(){
+					water=[];
+					for(j=0;j<=48;j++)
+					{
+						water[j]="images/sprites/water_beak/" + j + ".png";
+					}
+					if(this.y<water.length){
+						$("#beak2_water").attr("src",water[this.y]);
+					}
+					this.y++;
+					if(this.y == 49){
+						clearInterval(time4);
+					}
+				},50)
+			},2800);
+			setTimeout(function(){
+				$("#beak2").css("top","-2%");
+				$("#beak2").css("left","22.7%");
+				this.z=205;
+				time5=setInterval(function(){
+					water=[];
+					for(k=205;k<=294;k++)
+					{
+						water[k]="images/sprites/sugar_salt/" + k + ".png";
+					}
+					if(this.z<water.length){
+						$("#beak2").attr("src",water[this.z]);
+					}
+					if(this.z==213)
+					{
+						$("#ar3_txt").show();
+					}
+					if(this.z == 265){
+						$("#ar3_txt").hide();
+					}
+					this.z++;
+					if(this.z == 295){
+					 	$("#rod1").show();
+						clearInterval(time5);
+					}
+				},50)
+			},6000)
+			 setTimeout(function(){
+			 	this.x=0;
+			 	time6=setInterval(function(){
+			 		for(j=0;j<=59;j++)
+					{
+						water[j]="images/sprites/stirring/" + j + ".png";
+					}
+					if(this.x<water.length){
+						$("#rod1").attr("src",water[this.x]);
+					}
+					this.x++;
+					if(this.x == 60){
+						$("#rod1").hide();
+						clearInterval(time6);
+						$("#tag2").show();
+						$("#salt2_txt").show();
+						setTimeout(function(){
+							view.animateDirection_1('tag2', '-=3', '-=0', '1000');
+						},500);
+						setTimeout(function(){
+							view.animateDirection_1('salt2_txt', '-=3', '-=0', '1000');
+						},500);
+					}
+				},50)
+			 },10000)
+		}
+	},
+#+END_SRC
+
+**** CallSugar
+This method is called when sugar box is clicked. It animates a beaker onto
+	the table, pours water from flask into the beaker, fills the beaker,
+	adds sugar to the beaker and stirrs the beaker.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js     
+	callSugar: function(){
+		if(this.step_no == 2)
+		{
+			$("#back3").show();
+			$("#beak3").show();
+			this.animateDirection_1('beak3', '+=38', '-=52', '1000');
+			this.step_no++;
+			setTimeout(function(){
+			$("#flask3").show();
+			$("#arrow4").show();
+			$("#ar4_txt").show();
+			},1000);
+			setTimeout(function(){
+				this.x=1;
+				$("#arrow4").hide();
+				$("#ar4_txt").hide();
+				time7=setInterval(function(){
+					images=[];
+					for(i=1;i<=69;i++)
+					{
+						images[i]= "images/sprites/water_flasks/"  + i + ".png";
+					}
+					if(this.x<images.length)
+					{
+						$("#flask3").attr("src",images[this.x]);
+					}
+					this.x++;
+					if(this.x ==70){
+						$("#flask3").hide();
+						clearInterval(time7);
+					}
+				},50);
+			},3000);
+			setTimeout(function(){
+				this.y=1;
+				time8=setInterval(function(){
+					water=[];
+					for(j=0;j<=48;j++)
+					{
+						water[j]="images/sprites/water_beak/" + j + ".png";
+					}
+					if(this.y<water.length){
+						$("#beak3_water").attr("src",water[this.y]);
+					}
+					this.y++;
+					if(this.y == 49){
+						clearInterval(time8);
+					}
+				},50)
+			},2800);
+			setTimeout(function(){
+				$("#beak3").css("top","-2%");
+				$("#beak3").css("left","33.8%");
+				this.z=205;
+				time9=setInterval(function(){
+					water=[];
+					for(k=205;k<=294;k++)
+					{
+						water[k]="images/sprites/sugar_salt/" + k + ".png";
+					}
+					if(this.z<water.length){
+						$("#beak3").attr("src",water[this.z]);
+					}
+					if(this.z==213)
+					{
+						$("#ar5_txt").show();
+					}
+					if(this.z == 265){
+						$("#ar5_txt").hide();
+					}
+					this.z++;
+					if(this.z == 295){
+					 	$("#rod2").show();
+						clearInterval(time9);
+					}
+				},50)
+			},6000)
+			setTimeout(function(){
+			 	this.x=0;
+			 	time10=setInterval(function(){
+			 		for(j=0;j<=59;j++)
+					{
+						water[j]="images/sprites/stirring/" + j + ".png";
+					}
+					if(this.x<water.length){
+						$("#rod2").attr("src",water[this.x]);
+					}
+					this.x++;
+					if(this.x == 60){
+						$("#rod2").hide();
+						clearInterval(time10);
+						$("#tag3").show();
+						$("#sugar_txt").show();
+						setTimeout(function(){
+							view.animateDirection_1('tag3', '-=3', '-=0', '1000');
+						},500);
+						setTimeout(function(){
+							view.animateDirection_1('sugar_txt', '-=3', '-=0', '1000');
+						},500);
+					}
+				},50)
+			 },10000)
+		}
+	},
+#+END_SRC
+
+**** CallDeter
+This method is called when detergent box is clicked. It animates a beaker onto
+	the table, pours water from flask into the beaker, fills the beaker,
+	adds detergent to the beaker and stirrs the beaker.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	callDeter: function(){
+		if(this.step_no == 3)
+		{
+			$("#back4").show();
+			$("#beak4").show();
+			this.animateDirection_1('beak4', '+=38', '-=40', '1000');
+			this.step_no++;
+			setTimeout(function(){
+			$("#flask4").show();
+			$("#arrow5").show();
+			$("#ar6_txt").show();
+			},1000);
+			setTimeout(function(){
+				this.x=1;
+				$("#arrow5").hide();
+				$("#ar6_txt").hide();
+				time11=setInterval(function(){
+					images=[];
+					for(i=1;i<=69;i++)
+					{
+						images[i]= "images/sprites/water_flasks/"  + i + ".png";
+					}
+					if(this.x<images.length)
+					{
+						$("#flask4").attr("src",images[this.x]);
+					}
+					this.x++;
+					if(this.x ==70){
+						$("#flask4").hide();
+						clearInterval(time11);
+					}
+				},50);
+			},3000);
+			setTimeout(function(){
+				this.y=1;
+				time12=setInterval(function(){
+					water=[];
+					for(j=0;j<=48;j++)
+					{
+						water[j]="images/sprites/water_beak/" + j + ".png";
+					}
+					if(this.y<water.length){
+						$("#beak4_water").attr("src",water[this.y]);
+					}
+					this.y++;
+					if(this.y == 49){
+						clearInterval(time12);
+					}
+				},50)
+			},2800);
+			setTimeout(function(){
+				$("#beak4").css("top","-2%");
+				$("#beak4").css("left","45.8%");
+				this.z=205;
+				time13=setInterval(function(){
+					water=[];
+					for(k=205;k<=294;k++)
+					{
+						water[k]="images/sprites/detergent_mixing/" + k + ".png";
+					}
+					if(this.z<water.length){
+						$("#beak4").attr("src",water[this.z]);
+					}
+					if(this.z==213)
+					{
+						$("#ar7_txt").show();
+					}
+					if(this.z == 265){
+						$("#ar7_txt").hide();
+					}
+					this.z++;
+					if(this.z == 295){
+					 	$("#rod3").show();
+						clearInterval(time13);
+					}
+				},50)
+			},6000)
+			setTimeout(function(){
+			 	this.x=0;
+			 	this.a=100;
+			 	this.b=0;
+			 	time14=setInterval(function(){
+			 		for(j=0;j<=59;j++)
+					{
+						water[j]="images/sprites/stirring/" + j + ".png";
+					}
+					if(this.x<water.length){
+						$("#rod3").attr("src",water[this.x]);
+						this.a-=1.8;
+						if(this.a<0)
+							this.a=0;
+						this.b=this.a +"%"; 
+						$("#beak4_water").css("-webkit-filter","grayscale("+this.b+")");
+					}
+					this.x++;
+					if(this.x == 55){
+						$("#beak4_water").css("top","58.6%");
+						$("#beak4_water").attr("src","images/shapes/457.png");
+					}
+					if(this.x == 70)
+					{
+						$("#rod3").hide();
+						clearInterval(time14);
+						$("#tag4").show();
+						$("#deter_txt").show();
+						setTimeout(function(){
+							view.animateDirection_1('tag4', '-=3', '-=0', '1000');
+						},500);
+						setTimeout(function(){
+							view.animateDirection_1('deter_txt', '-=3', '-=0', '1000');
+						},500);
+					}
+				},50)
+			 },10000)
+		}
+	},
+#+END_SRC
+
+**** CallFeoh
+This method is called when Fe(OH)3 flask is clicked. It animates a beaker onto
+	the table, pours Fe(OH)3 colloid from flask into the beaker and fills the beaker.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+	callFeoh: function(){
+		if(this.step_no == 4)
+		{
+			$("#back5").show();
+			$("#beak5").show();
+			this.animateDirection_1('beak5', '+=38', '-=28', '1000');
+			this.step_no++;
+			setTimeout(function(){
+			$("#flask5").show();
+			$("#arrow6").show();
+			$("#ar8_txt").show();
+			},1000);
+			setTimeout(function(){
+				this.x=1;
+				$("#arrow6").hide();
+				$("#ar8_txt").hide();
+				time15=setInterval(function(){
+					images=[];
+					for(i=1;i<=69;i++)
+					{
+						images[i]= "images/sprites/feoh_flasks/"  + i + ".png";
+					}
+					if(this.x<images.length)
+					{
+						$("#flask5").attr("src",images[this.x]);
+					}
+					this.x++;
+					if(this.x ==70){
+						$("#flask5").hide();
+						clearInterval(time15);
+					}
+				},50);
+			},3000);
+			setTimeout(function(){
+				this.y=1;
+				time12=setInterval(function(){
+					water=[];
+					for(j=0;j<=48;j++)
+					{
+						water[j]="images/sprites/water_beak/" + j + ".png";
+					}
+					if(this.y<water.length){
+						$("#beak5_water").attr("src",water[this.y]);
+					}
+					this.y++;
+					if(this.y == 49){
+						clearInterval(time12);
+					}
+				},50)
+			},2800);
+			// setTimeout(function(){
+			// 	$("#beak4").css("top","-2%");
+			// 	$("#beak4").css("left","45.8%");
+			// 	this.z=205;
+			// 	time13=setInterval(function(){
+			// 		water=[];
+			// 		for(k=205;k<=294;k++)
+			// 		{
+			// 			water[k]="images/sprites/detergent_mixing/" + k + ".png";
+			// 		}
+			// 		if(this.z<water.length){
+			// 			$("#beak4").attr("src",water[this.z]);
+			// 		}
+			// 		if(this.z==213)
+			// 		{
+			// 			$("#ar7_txt").show();
+			// 		}
+			// 		if(this.z == 265){
+			// 			$("#ar7_txt").hide();
+			// 		}
+			// 		this.z++;
+			// 		if(this.z == 295){
+			// 		 	$("#rod3").show();
+			// 			clearInterval(time13);
+			// 		}
+			// 	},50)
+			// },6000)
+			// setTimeout(function(){
+			//  	this.x=0;
+			//  	this.a=100;
+			//  	this.b=0;
+			//  	time14=setInterval(function(){
+			//  		for(j=0;j<=59;j++)
+			// 		{
+			// 			water[j]="images/sprites/stirring/" + j + ".png";
+			// 		}
+			// 		if(this.x<water.length){
+			// 			$("#rod3").attr("src",water[this.x]);
+			// 			this.a-=1.8;
+			// 			if(this.a<0)
+			// 				this.a=0;
+			// 			this.b=this.a +"%"; 
+			// 			$("#beak4_water").css("-webkit-filter","grayscale("+this.b+")");
+			// 		}
+			// 		this.x++;
+			// 		if(this.x == 55){
+			// 			$("#beak4_water").css("top","58.6%");
+			// 			$("#beak4_water").attr("src","images/shapes/457.png");
+			// 		}
+			// 		if(this.x == 70)
+			// 		{
+			// 			$("#rod3").hide();
+			// 			clearInterval(time14);
+			// 			$("#tag4").show();
+			// 			$("#deter_txt").show();
+			// 			setTimeout(function(){
+			// 				view.animateDirection_1('tag4', '-=3', '-=0', '1000');
+			// 			},500);
+			// 			setTimeout(function(){
+			// 				view.animateDirection_1('deter_txt', '-=3', '-=0', '1000');
+			// 			},500);
+			// 		}
+			// 	},50)
+			//  },10000)
+		}
+	},
+};
+#+END_SRC
+
+**** Onload Function
+     This method is called when the page loads.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
+ window.onload=function () {
+	 view.activateEvents();
+ };
+#+END_SRC
+
+** Experiment-5 CSS
+
+*** Styling the body
+
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+
+body{
+    width:1080px; 
+    height:715px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    position: relative;
+}
+#+END_SRC
+
+*** Styling the Heading 
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#header{
+	position: absolute;
+	font-weight: bold;
+	font-size: 35px;
+	top: 4%;
+	left: 37%;
+	text-align: center;
+	z-index: 1;
+	align-content: center;
+}
+#+END_SRC
+
+*** Styling the Experiment Table image
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#expt_table{
+	position: absolute;
+	top: 12%;
+	left: 20%;
+	height: 78%;
+}
+#+END_SRC
+
+*** Styling the table containing all equipment
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#table{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 2;
+	height: 6%;
+	width: 41.5%;
+/*	-webkit-box-shadow: 0 4px 4px -2px #000000;
+   	-moz-box-shadow: 0 4px 4px -2px #000000;
+    box-shadow: 0 4px 4px -2px #000000;
+*/	/*box-shadow: 5px 5px 5px;*/
+}
+#+END_SRC
+
+*** Styling the Water flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#flsk{
+	position: absolute;
+	top: 13%;
+	left: 19.5%;
+	height: 13%;
+	z-index: 10;
+}
+#+END_SRC
+
+*** Styling the text below Water Flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#fl_txt{
+	position: absolute;
+	left: 22%;
+	top: 23.5%;
+	font-weight: bold;
+	font-size: 10px;
+	z-index: 3;
+}
+#+END_SRC
+
+*** Styling the salt text on the salt box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#salt_shrt{
+	position: absolute;
+	left: 29.4%;
+	top: 18.2%;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 8px;
+	z-index: 5;
+}
+#+END_SRC
+
+*** Styling the salt text below the salt box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#salt_txt{
+	position: absolute;
+	left: 29%;
+	top: 23.5%;
+	font-weight: bold;
+	font-size: 10px;
+	z-index: 3;
+}
+#+END_SRC
+
+*** Styling the salt box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#salt{
+	position: absolute;
+	left: 28%;
+	top: 14%;
+	z-index: 4;
+	height: 9%;
+}
+#+END_SRC
+
+*** Styling the Detergent box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#dtr{
+	position: absolute;
+	left: 42%;
+	top: 14%;
+	z-index: 4;
+	height: 9%;
+}
+#+END_SRC
+
+*** Styling the short text on the Detergent box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#dtr_shrt{
+	position: absolute;
+	left: 42.3%;
+	top: 18.2%;
+	font-weight: bold;
+	color: #00cc00;
+	font-size: 8px;
+	z-index: 5;
+}
+#+END_SRC
+
+*** Styling the Detergent text below detergent box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#dtr_txt{
+	position: absolute;
+	left: 42%;
+	top: 23.5%;
+	font-weight: bold;
+	font-size: 10px;
+	z-index: 3;
+}
+#+END_SRC
+
+*** Styling the Sugar box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#sgr{
+	position: absolute;
+	left: 35%;
+	top: 14%;
+	z-index: 4;
+	height: 9%;
+}
+#+END_SRC
+
+*** Styling the short text on the sugar box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#sgr_shrt{
+	position: absolute;
+	left: 36%;
+	top: 18.2%;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 8px;
+	z-index: 5;
+
+}
+#+END_SRC
+
+*** Styling the text below sugar box
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#sgr_txt{
+	position: absolute;
+	left: 35.55%;
+	top: 23.5%;
+	font-weight: bold;
+	font-size: 10px;
+	z-index: 3;
+}
+#+END_SRC
+
+*** Styling the Fe(OH)3 flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#feoh{
+	position: absolute;
+	height: 13%;
+	z-index: 4;
+	left: 46%;
+	top: 12%;
+}
+#+END_SRC
+
+*** Styling the text below the Fe(OH)3 flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#feoh_txt{
+	position: absolute;
+	left: 49%;
+	top: 23.5%;
+	font-weight: bold;
+	font-size: 10px;
+	z-index: 3;	
+}
+#+END_SRC
+
+*** Styling the Ag flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#ag{
+	position: absolute;
+	height: 13%;
+	z-index: 4;
+	left: 52%;
+	top: 12%;
+}
+#+END_SRC
+
+*** Styling the text below Ag-colloid flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#ag_txt{
+	position: absolute;
+	left: 55%;
+	top: 23.5%;
+	font-weight: bold;
+	font-size: 10px;
+	z-index: 3;	
+}
+
+#+END_SRC
+
+*** Styling the beaker flask
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#beak_tabl{
+	position: absolute;
+	left: 88.7%;
+	top: 26%;
+	z-index: 2;
+	width: 12%;
+	height: 5%;
+}
+#+END_SRC
+
+*** Styling the Main beaker
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#main_beak{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+}
+#+END_SRC
+
+*** Styling the text below the beaker
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#beak_txt{
+	position: absolute;
+	background-color: #000;
+	top: 31.1%;
+	left: 88.5%;
+	color: #ffffff;
+	text-align: center;
+	width: 12.3%;
+}
+#+END_SRC
+
+*** Styling the reset button
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#reset_btn{
+	position: absolute;
+	top: 90%;
+	left: 55%;
+}
+#+END_SRC
+
+*** Styling the six beakers which contain the samples
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#beak1{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak2{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak3{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak4{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak5{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+
+#beak6{
+	position: absolute;
+	left: 17.4%;
+	top: 1%;
+	z-index: 3;
+	height: 73%;
+	opacity: 0.9;
+	display: none;
+}
+#+END_SRC
+
+*** Styling the background behind the icons 
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#back1{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 20.5%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back2{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 27%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back3{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 34%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back4{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 41%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back5{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 47%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+
+#back6{
+	position: absolute;
+	display: none;
+	top: 13%;
+	left: 20.5%;
+	z-index: 2.5;
+	-webkit-filter:grayscale(100%);
+	height: 13%;
+}
+#+END_SRC
+
+*** Styling the flasks 
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#flask1{
+    position: absolute;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 89%;
+    top: 40%;
+}
+
+#flask2{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 32%;
+    top: 40%;
+}
+
+#flask3{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 42%;
+    top: 40%;
+}
+
+#flask4{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 55%;
+    top: 40%;
+}
+
+#flask5{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 66.5%;
+    top: 40%;
+}
+#+END_SRC
+
+*** Styling the description boxes
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#arrow1{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 75%;
+    top: 40%;
+}
+
+#arrow2{
+	position: absolute;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    display: none;
+    left: 20.2%;
+    top: 40.5%;
+    height: 5.3%;
+}
+
+#arrow4{
+	position: absolute;
+    display: none;
+    left: 50%;
+    top: 35%;
+    height: 5.3%;
+}
+
+#arrow5{
+	position: absolute;
+    display: none;
+    left: 63%;
+    top: 35%;
+    height: 8%;
+    width: 18%;
+}
+
+#arrow6{
+	position: absolute;
+    display: none;
+    left: 74%;
+    top: 35%;
+    height: 8%;
+    width: 18%;
+}
+#+END_SRC
+
+*** Styling the text inside the description boxes
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#ar1_txt{
+	position: absolute;
+	left: 75%;
+	top: 40%;
+	font-size: 14px;
+	display: none;
+}
+
+#ar2_txt{
+	position: absolute;
+	left: 21%;
+	top: 40%;
+	font-size: 14px;
+	width: 15%;
+	display: none;
+}
+
+#ar3_txt{
+	position: absolute;
+	left: 44%;
+	top: 38%;
+	font-size: 18px;
+	width: 18%;
+	display: none;
+	z-index: 20;
+}
+
+#ar4_txt{
+	position: absolute;
+	left: 51%;
+	top: 35.5%;
+	font-size: 14px;
+	width: 15%;
+	display: none;
+}
+
+#ar5_txt{
+	position: absolute;
+	left: 54%;
+	top: 38%;
+	font-size: 18px;
+	width: 20%;
+	display: none;
+	z-index: 20;
+}
+
+#ar6_txt{
+	position: absolute;
+	left: 63%;
+	top: 35%;
+	font-size: 18px;
+	width: 18%;
+	display: none;
+	z-index: 20;
+}
+
+#ar7_txt{
+	position: absolute;
+	left: 66%;
+	top: 38%;
+	font-size: 18px;
+	width: 20%;
+	display: none;
+	z-index: 20;
+}
+
+#ar8_txt{
+	position: absolute;
+	left: 74.3%;
+	top: 35%;
+	font-size: 18px;
+	width: 18%;
+	display: none;
+	z-index: 20;
+}
+#+END_SRC
+
+*** Styling the Water inside the beakers
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#beak1_water{
+	position: absolute;
+	opacity: 0.8;
+	-webkit-filter: grayscale(100%);
+	z-index: 11;
+	top: 61%;
+	left: 86%;
+	width: 6%;
+}
+
+#beak2_water{
+	position: absolute;
+	opacity: 0.8;
+	-webkit-filter: grayscale(100%);
+	z-index: 11;
+	top: 61%;
+	left: 28%;
+	width: 6%;
+}
+
+#beak3_water{
+	position: absolute;
+	opacity: 0.8;
+	-webkit-filter: grayscale(100%);
+	z-index: 11;
+	top: 61%;
+	left: 39%;
+	width: 6%;
+}
+
+#beak4_water{
+	position: absolute;
+	opacity: 0.8;
+	z-index: 11;
+	top: 61%;
+	left: 51%;
+	-webkit-filter: grayscale(100%);
+	width: 6%;
+}
+
+#beak5_water{
+	position: absolute;
+	opacity: 0.8;
+	z-index: 11;
+	top: 61%;
+	left: 63%;
+	-webkit-filter: grayscale(100%);
+	width: 6%;
+}
+#+END_SRC
+
+*** Styling the labels on the beakers
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#tag1{
+	position: absolute;
+	top: 59%;
+	left: 84%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#tag2{
+	position: absolute;
+	top: 59%;
+	left: 25.9%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#tag3{
+	position: absolute;
+	top: 59%;
+	left: 37%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#tag4{
+	position: absolute;
+	top: 59%;
+	left: 49%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+#+END_SRC
+
+*** Styling the description on the labels
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#water_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 87%;
+	display: none;
+	z-index: 13;
+	font-weight: bold;
+}
+
+#salt2_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 27%;
+	display: none;
+	z-index: 13;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#sugar_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 37.2%;
+	display: none;
+	z-index: 13;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#deter_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 49.4%;
+	display: none;
+	z-index: 13;
+	font-size: 15px;
+	font-weight: bold;
+}
+#+END_SRC
+
+*** Styling the Stirring rods
+#+name: CSS File
+#+BEGIN_SRC css :tangle expt-5.css
+#rod1{
+	position: absolute;
+	z-index: 30;
+	left: 23%;
+	top:45%;
+	width: 14%;
+	display: none;
+}
+
+#rod2{
+	position: absolute;
+	z-index: 30;
+	left: 34%;
+	top:45%;
+	width: 14%;
+	display: none;
+}
+
+#rod3{
+	position: absolute;
+	z-index: 30;
+	left: 46%;
+	top:45%;
+	width: 14%;
+	display: none;
+}
+#+END_SRC

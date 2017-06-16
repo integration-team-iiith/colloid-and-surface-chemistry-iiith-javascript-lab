@@ -6,12 +6,6 @@ body{
     position: relative;
 }
 
-h3{  
-    text-align: center;
-    font-weight: bold;
-    font-family: "Times New Roman", Times, serif;
-}
-
 #content{
 	/*position: absolute;*/
 	/*left: 20%;*/
@@ -217,15 +211,6 @@ h3{
 	position: absolute;
 	top: 90%;
 	left: 55%;
-}
-
-#main_beak{
-	position: absolute;
-	left: 17.4%;
-	top: 1%;
-	z-index: 3;
-	height: 73%;
-	opacity: 0.9;
 }
 
 #beak1{
@@ -689,7 +674,7 @@ h3{
 	opacity: 0.8;
 	z-index: 11;
 	top: 61%;
-	left: 51%;
+	left: 63%;
 	-webkit-filter: grayscale(100%);
 	width: 6%;
 }
