@@ -7,7 +7,7 @@
 #+TAGS: boilerplate(b) notes(n) solution(s)
 #+AUTHOR: K.L.MaheeSurya
 
-* Experiment-5
+* Experiment Contents
 ** Experiment-5 HTML 
 *** Head
     It contains the script sources and css,bootstrap sources and the title.
