@@ -41,44 +41,11 @@ var view={
     	document.getElementById(id).style.pointerEvents = 'auto';
   	},
 
-  	// replaceElements: Calls this method to replace the element with an other element.
-	replaceElements: function(id, image) {
-		var element = document.getElementById(id);
-		element.src = image;
-	},
-
-	// animateDirection_1: Calls this method to move an element in a straight line.
+  	// animateDirection_1: Calls this method to move an element in a straight line.
 	animateDirection_1: function(id,top,left,time){
 		$('#'+id).animate({
 			top: top+'%', 
 			left: left+'%'
-		}, {
-			duration: time
-		});
-	},
-
-	// animateDirection_2: Calls this method to move the element to the top first and then to the left.
-	animateDirection_2: function(id,top,left,time){
-		$('#'+id).animate({
-			top: top+'%'
-		}, {
-			duration: time
-		})
-				.animate({
-			left: left+'%'
-		}, {
-			duration: time
-		});
-	},
-
-	/* animateDirection_3: Calls this method to move the element in a straight line along with the width 
-	and height of the element increasing/decreasing. */
-	animateDirection_3: function(id, top, left, width, height,time){
-		$('#'+id).animate({
-			top: top+'%',
-			left: left+'%',
-			width: width+'%',
-			height: height+'%'
 		}, {
 			duration: time
 		});
@@ -527,81 +494,29 @@ var view={
 					water=[];
 					for(j=0;j<=48;j++)
 					{
-						water[j]="images/sprites/water_beak/" + j + ".png";
+						water[j]="images/sprites/water_beak/feoh/" + j + ".png";
 					}
 					if(this.y<water.length){
 						$("#beak5_water").attr("src",water[this.y]);
 					}
 					this.y++;
 					if(this.y == 49){
+						$("#beak5_water").attr("src","images/shapes/460.png");
+						$("#beak5_water").css("height","6.9%");
 						clearInterval(time12);
 					}
 				},50)
 			},2800);
-			// setTimeout(function(){
-			// 	$("#beak4").css("top","-2%");
-			// 	$("#beak4").css("left","45.8%");
-			// 	this.z=205;
-			// 	time13=setInterval(function(){
-			// 		water=[];
-			// 		for(k=205;k<=294;k++)
-			// 		{
-			// 			water[k]="images/sprites/detergent_mixing/" + k + ".png";
-			// 		}
-			// 		if(this.z<water.length){
-			// 			$("#beak4").attr("src",water[this.z]);
-			// 		}
-			// 		if(this.z==213)
-			// 		{
-			// 			$("#ar7_txt").show();
-			// 		}
-			// 		if(this.z == 265){
-			// 			$("#ar7_txt").hide();
-			// 		}
-			// 		this.z++;
-			// 		if(this.z == 295){
-			// 		 	$("#rod3").show();
-			// 			clearInterval(time13);
-			// 		}
-			// 	},50)
-			// },6000)
-			// setTimeout(function(){
-			//  	this.x=0;
-			//  	this.a=100;
-			//  	this.b=0;
-			//  	time14=setInterval(function(){
-			//  		for(j=0;j<=59;j++)
-			// 		{
-			// 			water[j]="images/sprites/stirring/" + j + ".png";
-			// 		}
-			// 		if(this.x<water.length){
-			// 			$("#rod3").attr("src",water[this.x]);
-			// 			this.a-=1.8;
-			// 			if(this.a<0)
-			// 				this.a=0;
-			// 			this.b=this.a +"%"; 
-			// 			$("#beak4_water").css("-webkit-filter","grayscale("+this.b+")");
-			// 		}
-			// 		this.x++;
-			// 		if(this.x == 55){
-			// 			$("#beak4_water").css("top","58.6%");
-			// 			$("#beak4_water").attr("src","images/shapes/457.png");
-			// 		}
-			// 		if(this.x == 70)
-			// 		{
-			// 			$("#rod3").hide();
-			// 			clearInterval(time14);
-			// 			$("#tag4").show();
-			// 			$("#deter_txt").show();
-			// 			setTimeout(function(){
-			// 				view.animateDirection_1('tag4', '-=3', '-=0', '1000');
-			// 			},500);
-			// 			setTimeout(function(){
-			// 				view.animateDirection_1('deter_txt', '-=3', '-=0', '1000');
-			// 			},500);
-			// 		}
-			// 	},50)
-			//  },10000)
+			setTimeout(function(){
+				$("#tag5").show();
+				$("#feoh2_txt").show();
+				// setTimeout(function(){
+					// view.animateDirection_1('tag5', '-=3', '-=0', '1000');
+				// },500);
+				// setTimeout(function(){
+					// view.animateDirection_1('feoh2_txt', '-=3', '-=0', '1000');
+				// },500);
+			},5000);
 		}
 	},
 };

@@ -675,7 +675,24 @@ body{
 	z-index: 11;
 	top: 61%;
 	left: 63%;
-	-webkit-filter: grayscale(100%);
 	width: 6%;
 }
 
+#tag5{
+	position: absolute;
+	top: 59%;
+	left: 49%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#feoh2_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 49.4%;
+	display: none;
+	z-index: 13;
+	font-size: 15px;
+	font-weight: bold;
+}

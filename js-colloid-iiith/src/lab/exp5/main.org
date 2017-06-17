@@ -20,7 +20,7 @@
 <head>
 	<title>Tyndal Effect</title>
 	<!-- Custom Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="csc_expt5.css">
+	<link rel="stylesheet" type="text/css" href="expt-5.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -31,7 +31,7 @@
 	<!-- Latest compiled JavaScript -->	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Custom JavaScript file -->
-	<script src="csc_expt5.js"></script>
+	<script src="expt-5.js"></script>
 	<!-- Google Analytics Code starts here -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -117,6 +117,8 @@
 			<img id="flask5" src="images/sprites/feoh_flasks/0.png">
 			<img id="arrow6" src="images/sprites/ya_bl/0.png">
 			<p id="ar8_txt">Adding Fe(OH)<sub>3</sub> colloid into beaker</p>
+			<p id="feoh2_txt">Fe(OH)<sub>3</sub> Colloid</p>
+		        <img id="tag5" src="images/sprites/tag/0.png">
 			<img id="beak5_water" src="images/sprites/water_beak/0.png">
 		</div>
 			<!-- The Reset Button -->
@@ -205,10 +207,10 @@ var view={
 #+END_SRC
 
 **** AnimateDirection-1
+        animates an object in a straight line
 #+name: JS File
 #+BEGIN_SRC javascript :tangle expt-5.js
-     animates an object in a straight line
-	// animateDirection_1: Calls this method to move an element in a straight line.
+  	// animateDirection_1: Calls this method to move an element in a straight line.
 	animateDirection_1: function(id,top,left,time){
 		$('#'+id).animate({
 			top: top+'%', 
@@ -705,81 +707,29 @@ This method is called when Fe(OH)3 flask is clicked. It animates a beaker onto
 					water=[];
 					for(j=0;j<=48;j++)
 					{
-						water[j]="images/sprites/water_beak/" + j + ".png";
+						water[j]="images/sprites/water_beak/feoh/" + j + ".png";
 					}
 					if(this.y<water.length){
 						$("#beak5_water").attr("src",water[this.y]);
 					}
 					this.y++;
 					if(this.y == 49){
+                                                $("#beak5_water").attr("src","images/shapes/460.png");
+						$("#beak5_water").css("height","6.9%");
 						clearInterval(time12);
 					}
 				},50)
 			},2800);
-			// setTimeout(function(){
-			// 	$("#beak4").css("top","-2%");
-			// 	$("#beak4").css("left","45.8%");
-			// 	this.z=205;
-			// 	time13=setInterval(function(){
-			// 		water=[];
-			// 		for(k=205;k<=294;k++)
-			// 		{
-			// 			water[k]="images/sprites/detergent_mixing/" + k + ".png";
-			// 		}
-			// 		if(this.z<water.length){
-			// 			$("#beak4").attr("src",water[this.z]);
-			// 		}
-			// 		if(this.z==213)
-			// 		{
-			// 			$("#ar7_txt").show();
-			// 		}
-			// 		if(this.z == 265){
-			// 			$("#ar7_txt").hide();
-			// 		}
-			// 		this.z++;
-			// 		if(this.z == 295){
-			// 		 	$("#rod3").show();
-			// 			clearInterval(time13);
-			// 		}
-			// 	},50)
-			// },6000)
-			// setTimeout(function(){
-			//  	this.x=0;
-			//  	this.a=100;
-			//  	this.b=0;
-			//  	time14=setInterval(function(){
-			//  		for(j=0;j<=59;j++)
-			// 		{
-			// 			water[j]="images/sprites/stirring/" + j + ".png";
-			// 		}
-			// 		if(this.x<water.length){
-			// 			$("#rod3").attr("src",water[this.x]);
-			// 			this.a-=1.8;
-			// 			if(this.a<0)
-			// 				this.a=0;
-			// 			this.b=this.a +"%"; 
-			// 			$("#beak4_water").css("-webkit-filter","grayscale("+this.b+")");
-			// 		}
-			// 		this.x++;
-			// 		if(this.x == 55){
-			// 			$("#beak4_water").css("top","58.6%");
-			// 			$("#beak4_water").attr("src","images/shapes/457.png");
-			// 		}
-			// 		if(this.x == 70)
-			// 		{
-			// 			$("#rod3").hide();
-			// 			clearInterval(time14);
-			// 			$("#tag4").show();
-			// 			$("#deter_txt").show();
-			// 			setTimeout(function(){
-			// 				view.animateDirection_1('tag4', '-=3', '-=0', '1000');
-			// 			},500);
-			// 			setTimeout(function(){
-			// 				view.animateDirection_1('deter_txt', '-=3', '-=0', '1000');
-			// 			},500);
-			// 		}
-			// 	},50)
-			//  },10000)
+			setTimeout(function(){
+			 			$("#tag5").show();
+			 			$("#feoh2_txt").show();
+			 			setTimeout(function(){
+			 				view.animateDirection_1('tag5', '-=3', '-=0', '1000');
+			 			},500);
+			 			setTimeout(function(){
+			 				view.animateDirection_1('feoh2_txt', '-=3', '-=0', '1000');
+			 			},500);
+			 		 },5000);
 		}
 	},
 };
@@ -1481,7 +1431,6 @@ body{
 	z-index: 11;
 	top: 61%;
 	left: 63%;
-	-webkit-filter: grayscale(100%);
 	width: 6%;
 }
 #+END_SRC
@@ -1520,6 +1469,15 @@ body{
 	position: absolute;
 	top: 59%;
 	left: 49%;
+	z-index: 12;
+	display: none;
+	width: 10%;
+}
+
+#tag5{
+	position: absolute;
+	top: 59%;
+	left: 60.9%;
 	z-index: 12;
 	display: none;
 	width: 10%;
@@ -1565,6 +1523,16 @@ body{
 	display: none;
 	z-index: 13;
 	font-size: 15px;
+	font-weight: bold;
+}
+
+#feoh2_txt{
+	position: absolute;
+	top: 60.3%;
+	left: 61.1%;
+	display: none;
+	z-index: 13;
+	font-size: 13.8px;
 	font-weight: bold;
 }
 #+END_SRC
