@@ -251,6 +251,8 @@ var view={
      This method is called when water flask is clicked. It animates a beaker
 	onto the table, animates a flask pouring water into the beaker and the
 	beaker getting filled up.
+***** Part-1
+      Animate the beaker onto the table and pour water into the beaker from the flask.
 #+name: JS File
 #+BEGIN_SRC javascript :tangle expt-5.js
 	water: function(){
@@ -286,6 +288,12 @@ var view={
 					}
 				},50);
 			},3000);
+#+END_SRC
+
+***** Part-2
+      Animate the effect of water getting filled into the beaker.
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				this.y=1;
 				time2=setInterval(function(){
@@ -319,6 +327,8 @@ var view={
      This method is called when salt box is clicked. It animates a beaker onto
 	the table, pours water from flask into the beaker, fills the beaker,
 	adds salt to the beaker and stirrs the beaker.
+***** Part-1
+      Animate the beaker onto the Table and pour water from the flask into the beaker.
 #+name: JS File
 #+BEGIN_SRC javascript :tangle expt-5.js
 	callSalt: function(){
@@ -354,6 +364,12 @@ var view={
 					}
 				},50);
 			},3000);
+#+END_SRC
+
+***** Part-2
+      Animates the effect of beaker being filled by water
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				this.y=1;
 				time4=setInterval(function(){
@@ -371,6 +387,12 @@ var view={
 					}
 				},50)
 			},2800);
+#+END_SRC
+
+***** Part-3
+      Animates the effect of salt getting added to the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				$("#beak2").css("top","-2%");
 				$("#beak2").css("left","22.7%");
@@ -398,6 +420,12 @@ var view={
 					}
 				},50)
 			},6000)
+#+END_SRC
+
+***** Part-4
+      Animates stirring effect
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			 setTimeout(function(){
 			 	this.x=0;
 			 	time6=setInterval(function(){
@@ -428,9 +456,11 @@ var view={
 #+END_SRC
 
 **** CallSugar
-This method is called when sugar box is clicked. It animates a beaker onto
+     This method is called when sugar box is clicked. It animates a beaker onto
 	the table, pours water from flask into the beaker, fills the beaker,
 	adds sugar to the beaker and stirrs the beaker.
+***** Part-1
+      Animates the beaker onto the table and pour water from flask into the beaker
 #+name: JS File
 #+BEGIN_SRC javascript :tangle expt-5.js     
 	callSugar: function(){
@@ -466,6 +496,12 @@ This method is called when sugar box is clicked. It animates a beaker onto
 					}
 				},50);
 			},3000);
+#+END_SRC
+
+***** Part-2
+      Animate the effect of water being added to beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				this.y=1;
 				time8=setInterval(function(){
@@ -483,6 +519,12 @@ This method is called when sugar box is clicked. It animates a beaker onto
 					}
 				},50)
 			},2800);
+#+END_SRC
+
+***** Part-3
+      Animate the effect of sugar being added to the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				$("#beak3").css("top","-2%");
 				$("#beak3").css("left","33.8%");
@@ -510,6 +552,12 @@ This method is called when sugar box is clicked. It animates a beaker onto
 					}
 				},50)
 			},6000)
+#+END_SRC
+
+***** Part-4
+      Animate the stirring of the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 			 	this.x=0;
 			 	time10=setInterval(function(){
@@ -543,6 +591,8 @@ This method is called when sugar box is clicked. It animates a beaker onto
 This method is called when detergent box is clicked. It animates a beaker onto
 	the table, pours water from flask into the beaker, fills the beaker,
 	adds detergent to the beaker and stirrs the beaker.
+***** Part-1
+       Animates the beaker onto the table and pour water from flask into the beaker
 #+name: JS File
 #+BEGIN_SRC javascript :tangle expt-5.js
 	callDeter: function(){
@@ -578,6 +628,12 @@ This method is called when detergent box is clicked. It animates a beaker onto
 					}
 				},50);
 			},3000);
+#+END_SRC
+
+***** Part-2
+       Animate the effect of water being added to beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				this.y=1;
 				time12=setInterval(function(){
@@ -595,6 +651,12 @@ This method is called when detergent box is clicked. It animates a beaker onto
 					}
 				},50)
 			},2800);
+#+END_SRC
+
+***** Part-3
+       Animate the effect of detergent being added to the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				$("#beak4").css("top","-2%");
 				$("#beak4").css("left","45.8%");
@@ -622,6 +684,12 @@ This method is called when detergent box is clicked. It animates a beaker onto
 					}
 				},50)
 			},6000)
+#+END_SRC
+
+***** Part-4
+       Animate the stirring of the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 			 	this.x=0;
 			 	this.a=100;
@@ -664,8 +732,11 @@ This method is called when detergent box is clicked. It animates a beaker onto
 #+END_SRC
 
 **** CallFeoh
-This method is called when Fe(OH)3 flask is clicked. It animates a beaker onto
+     This method is called when Fe(OH)3 flask is clicked. It animates a beaker onto
 	the table, pours Fe(OH)3 colloid from flask into the beaker and fills the beaker.
+***** Part-1
+      Animate the beaker onto the table and empty the contents of the flask
+      into the beaker
 #+name: JS File
 #+BEGIN_SRC javascript :tangle expt-5.js
 	callFeoh: function(){
@@ -701,6 +772,12 @@ This method is called when Fe(OH)3 flask is clicked. It animates a beaker onto
 					}
 				},50);
 			},3000);
+#+END_SRC
+
+***** Part-2
+      Animates the effect of Fe(OH)3 getting filled in the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 				this.y=1;
 				time12=setInterval(function(){
@@ -720,6 +797,12 @@ This method is called when Fe(OH)3 flask is clicked. It animates a beaker onto
 					}
 				},50)
 			},2800);
+#+END_SRC
+
+***** Part-3
+      Animate the effect of label and text on label on the beaker
+#+name: JS File
+#+BEGIN_SRC javascript :tangle expt-5.js
 			setTimeout(function(){
 			 			$("#tag5").show();
 			 			$("#feoh2_txt").show();
