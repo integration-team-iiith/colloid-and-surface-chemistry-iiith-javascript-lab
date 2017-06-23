@@ -36,6 +36,7 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 * Using ActionScript to JavaScript transpilers like [AS3JS](http://as3js.org/). But, the problem with AS3JS is that, it converts ActionScript into some complex form of JavaScript. It is difficult to understand and to use the JavaScript files generated using AS3JS.
 
 * [Haxe](http://haxe.org/) is a cross-platform toolkit. It is similar to ActionScript and hence it is one of the easiest options for conversion, in particular if used through [OpenFL](http://www.openfl.org/). Haxe can compile to several languages including JavaScript. Some automatic conversion tools are currently available, such as as3hx and as3tohx, which convert a significant part of the code for you.
+* While searching for tools which can convert SWF files into HTML5, I came across a tool called [SWIFFY]() developed by Google. As per Wikipedia, Google Swiffy was a web-based tool developed by Google that converted SWF files to HTML5. Its main goal was to display Flash contents on devices that do not support Flash, such as iPhone, iPad, and Android Tablets. Swiffy was shut down July 1, 2016. It would be the perfect tool for the conversion. 
 
 #### Method adopted
 
@@ -67,13 +68,17 @@ The continuing absence of an easy conversion process from Flash to HTML5 and inc
 
 * Take screenshot of all graphs in a particular experiment. Then slideshow these images in a new window when Data button is clicked.
 
+* Desktop recorders like [RecordMyDesktop](http://recordmydesktop.sourceforge.net/downloads.php) and [Kazam](https://apps.ubuntu.com/cat/applications/kazam/) can also be used to capture a part of the screen. This video can be used either to extract images or create an animated gif by cutting useless parts of the video and using online [Video-To-GIF](https://ezgif.com/video-to-gif) converters. To get images/frames from the video a tool called [FFMPEG](https://ffmpeg.org/ffmpeg.html) can be used. I use it to extract 10 images per second and delete unneccessary images and use the remaining images to create an animated GIF using [Image-To-GIF](https://imgflip.com/images-to-gif) online converters. The second method is time-taking but gives a perfect GIF without any kind of stuttering effects. As of now, both desktop recorders do not have an appreciable resolution when it comes to recording desktop. I'm searching for a tool which has a good GUI and records with good resolution.
+
 ##### Additional scripts necessary 
 
 * [jQuery](https://jquery.com/) for HTML document traversal and manipulation, event handling, animation, and Ajax.
 
 * [Bootstrap](http://getbootstrap.com/) to make front-end web development faster and easier. It helps in dividing web page into various rows and columns.
 
-* jQueryRotate.js for rotating certain images.
+* [jQueryRotate.js](http://jqueryrotate.com/) for rotating certain images.
+
+* [jQuery-confirm.js](https://craftpip.github.io/jquery-confirm/) to style alert boxes and give a transition effect. 
 
 #### Opportuniies for Improvements 
 
