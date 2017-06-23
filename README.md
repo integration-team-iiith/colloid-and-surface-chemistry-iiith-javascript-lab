@@ -33,7 +33,7 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 
 * Using [Adobe Wallaby](https://blogs.adobe.com/labs/archives/2011/03/convert-flash-to-html-files-with-wallaby-on-labs-now.html) or [Animate CC](https://helpx.adobe.com/animate/using/creating-publishing-html5-canvas-document.html) for the conversion.
 
-* Using ActionScript to JavaScript transpilers like [AS3JS](http://as3js.org/). But, the problem with AS3JS is that, it converts ActionScript into some complex form of JavaScript. It is difficult to understand and use the JavaScript files generated using AS3JS.
+* Using ActionScript to JavaScript transpilers like [AS3JS](http://as3js.org/). But, the problem with AS3JS is that, it converts ActionScript into some complex form of JavaScript. It is difficult to understand and to use the JavaScript files generated using AS3JS.
 
 * [Haxe](http://haxe.org/) is a cross-platform toolkit. It is similar to ActionScript and hence it is one of the easiest options for conversion, in particular if used through [OpenFL](http://www.openfl.org/). Haxe can compile to several languages including JavaScript. Some automatic conversion tools are currently available, such as as3hx and as3tohx, which convert a significant part of the code for you.
 
