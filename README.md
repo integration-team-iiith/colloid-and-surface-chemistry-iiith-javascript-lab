@@ -88,6 +88,8 @@ The continuing absence of an easy conversion process from Flash to HTML5 and inc
 
 * Since many images are used in these experiments, page takes time to load on certain machines. So in order to take care of performance factor, sprites can be used, to reduce the number of http requests for group of images. 
 
+* Sometimes we need to execute multiple functions parallelly. But, as per my current knowledge, JavaScript does not provide methods for parallel function execution. I am trying to find methods which can make this parallel execution possible. Recently, I found that multi-threading is possible in JavaScript using the method of [Web-Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). I don't know whether it will work or not, but I am willing to take a chance and explore that method.
+
 #### References
 * [http://www.w3schools.com/](http://www.w3schools.com/) for basic HTML CSS and JavaScript.
 * [http://stackoverflow.com/](http://stackoverflow.com/) for certain difficulties faced during the development.
