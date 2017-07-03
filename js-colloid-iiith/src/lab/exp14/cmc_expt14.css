@@ -1,0 +1,310 @@
+body{
+	width:1080px; 
+    height:715px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    position: relative;
+}
+
+#rod{
+	position: absolute;
+	z-index: 3;
+	left: 39%;
+	top: 17%;
+}
+
+#background{
+	position: absolute;
+	z-index: 1;
+	top: 6%;
+	left: 15%;
+}
+
+#scale{
+	position: absolute;
+	left: 16%;
+	top: 6%;
+	z-index: 2;
+}
+
+#readings{
+	position: absolute;
+	z-index: 2;
+	width: 5.7%;
+	left: 23.8%;
+	top: 59.57%;
+}
+
+#stand{
+	position: absolute;
+	z-index: 2;
+	left: 55.9%;
+	top:20%;
+	height: 50%;
+}
+
+#piece_stand{
+	position: absolute;
+	z-index: 4;
+	left: 62.5%;
+	top: 35.5%;
+}
+
+#piece1{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 15.7%;
+}
+
+#piece2{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 19%;
+	opacity: 0;
+}
+
+#piece3{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 23%;
+	opacity: 0;
+}
+
+#piece4{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 26.5%;
+	opacity: 0;
+}
+
+#piece5{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 30.5%;
+	opacity: 0;
+}
+
+
+#piece6{
+	position: absolute;
+	z-index: 3;
+	top: 12%;
+	left: 33.5%;
+	opacity: 0;
+}
+
+
+#piece7{
+	position: absolute;
+	z-index: 3;
+	top: 12%;
+	left: 37%;
+	opacity: 0;
+}
+
+
+#piece8{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 41.5%;
+	opacity: 0;
+}
+
+
+#piece9{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 45%;
+	opacity: 0;
+}
+
+
+#piece10{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 48.6%;
+	opacity: 0;
+}
+
+
+#piece11{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 52%;
+	opacity: 0;
+}
+
+
+#piece12{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 55.7%;
+	opacity: 0;
+}
+
+
+#piece13{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 59.4%;
+	opacity: 0;
+}
+
+
+#piece14{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 62.5%;
+	opacity: 0;
+}
+
+
+#piece15{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 67%;
+	opacity: 0;
+}
+
+
+#piece16{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 70.5%;
+	opacity: 0;
+}
+
+
+#piece17{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 73.6%;
+	opacity: 0;
+}
+
+
+#piece18{
+	position: absolute;
+	z-index: 2;
+	top: 12%;
+	left: 77.6%;
+	opacity: 0;
+}
+
+#pour{
+	position: absolute;
+	z-index: 5;
+	height: 17.9%;
+	top: 62.9%;
+	left: 30.35%;
+}
+
+#markings{
+	position: absolute;
+	z-index: 7;
+	width: 10.7%;
+	height: 6.5%;
+	top: 58.6%;
+	left: 30%;
+}
+
+#sample{
+	position: absolute;
+	z-index: 2;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffff00;
+	top: 77%;
+	left: 45%;
+}
+
+#hand1{
+	position: absolute;
+	z-index: 2;
+	left: 30%;
+	top: 10%;
+}
+
+#conc{
+	position: absolute;
+	z-index: 2;
+	left: 40%;
+	top: 17%;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#beak_water{
+	position: absolute;
+	z-index: 5;
+	top: 75%;
+	left: 48.5%;
+	width: 3%;
+}
+
+#rod_button1{
+	position: absolute;
+	z-index: 3;
+	top: 33%;
+	left: 61%;
+	opacity: 0;
+}
+
+#rod_button2{
+	position: absolute;
+	z-index: 3;
+	top: 51%;
+	left: 49%;
+	opacity: 0;
+}
+
+#hand2{
+	position: absolute;
+	z-index: 2;
+	left: 60%;
+	top: 30%;
+	display: none;
+}
+
+#cell{
+	position: absolute;
+	z-index: 2;
+	left: 67%;
+	top: 38%;
+	font-weight: bold;
+	font-size: 11px;
+	display: none;
+}
+
+#hand3{
+	position: absolute;
+	z-index: 2;
+	left: 47%;
+	top: 48%;
+	display: none;
+}
+
+#click{
+	position: absolute;
+	z-index: 2;
+	left: 53%;
+	top: 56%;
+	font-weight: bold;
+	font-size: 11px;
+	display: none;
+}
