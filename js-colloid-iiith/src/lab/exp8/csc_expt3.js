@@ -101,7 +101,7 @@ function callHeater1(){
 		$("#stir_arrow").hide();
 		$("#stir_txt").hide();
 		$("#change").html("Wait till the AgNO<sub>3</sub> Solution starts boiling");
-		$("#magnet").attr("src","images/shapes/magnet.gif");
+		$("#magnet").attr("src","images/magnet.gif");
 		setTimeout(function() {
 			$("#bubbles").show();
 			$("#change").html("Click on the pipette to move it into the beaker containing tri-sodium citrate solution...");
