@@ -54,7 +54,7 @@ function callFlask(){
 		step_no++;
 		$("#flsk_arrow").hide();
 		$("#flsk_txt").hide();
-		animate("#flask",519.1,79.5,1500);
+		animate("#flask",519.1,135.5,1500);
 		setTimeout(function(){
 			$("#change").html("Click on the Magnetic Bead to drop it in the Flask..");
 			$("#magnet").show();
@@ -71,7 +71,7 @@ function callMagnet(){
 		step_no++;
 		$("#magnet_arrow").hide();
 		$("#magnet_txt").hide();
-		animate("#magnet",0,184.5,800);
+		animate("#magnet",0,238.4,800);
 		setTimeout(function() {
 			$("#change").html("Click on the Heater Switch to turn the Magnetic Heater On....");
 			$("#heater_txt").show();
@@ -122,30 +122,30 @@ function callPipette(){
 		step_no++;
 		$("#pipette_arrow").hide();
 		$("#pipette_arrow").rotate({angle:160});
-		$("#pipette_arrow").css("top","185%");
-		$("#pipette_arrow").css("left","39%");
-		$("#pipette_txt").css("top","130%");
-		$("#pipette_txt").css("left","53%");
+		$("#pipette_arrow").css("top","415%");
+		$("#pipette_arrow").css("left","37%");
+		$("#pipette_txt").css("top","300%");
+		$("#pipette_txt").css("left","49%");
 		$("#pipette_txt").hide();
 		setTimeout(function() {
 			$("#pipette_txt").show();
 			$("#pipette_arrow").show();
 			$("#change").html("Click on the pipette to draw 10ml of tri-sodium citrate solution from the beaker...");
 		}, 1000);
-		animate("#pipette",-197.2,150.5,1000);
+		animate("#pipette",-170,154,1000);
 	}
 	else if(step_no == 5){
 		$("#beaker_water").velocity({ 
-			height: "15%",
-			translateY: 18.6,},
+			height: "30%",
+			translateY: 21.3,},
 			{ duration: 1000});
 		step_no++;
 		$("#pipette_arrow").hide();
 		$("#pipette_txt").hide();
 		$("#pipette_arrow").rotate({angle:0});
-		$("#pipette_arrow").css("top","161%");
+		$("#pipette_arrow").css("top","380%");
 		$("#pipette_arrow").css("left","33%");
-		$("#pipette_txt").css("top","220%");
+		$("#pipette_txt").css("top","500%");
 		$("#pipette_txt").css("left","30%");
 		setTimeout(function() {
 			animate("#pipette",5,-10,1000);
@@ -159,12 +159,12 @@ function callPipette(){
 	else if( step_no == 6){
 		step_no++;
 		$("#pipette_arrow").hide();
-		$("#pipette_arrow").css("top","120%");
-		$("#pipette_arrow").css("left","44%");
+		$("#pipette_arrow").css("top","300%");
+		$("#pipette_arrow").css("left","47%");
 		$("#pipette_txt").hide();
-		$("#pipette_txt").css("top","180%");
-		$("#pipette_txt").css("left","41%");
-		animate("#pipette",165,-50,1000);
+		$("#pipette_txt").css("top","430%");
+		$("#pipette_txt").css("left","44%");
+		animate("#pipette",190,-50,1000);
 		setTimeout(function() {
 			$("#change").html("Click on the pipette to add tri-sodium citrate solution, drop by drop to boiling AgNO<sub>3</sub> solution in the flask...");	
 			$("#drop").show();
@@ -197,6 +197,7 @@ function callPipette(){
 								$("#drop").hide();
 								$("#txt").show();
 								$("#change").html("Golden coloured Silver colloid formed....<br> Click on RESET to start the experiment again...")
+								$("#change").css("margin-top","-8px");								
 							}, 500);
 						}, 500);
 					}, 500);
