@@ -308,3 +308,184 @@ body{
 	font-size: 11px;
 	display: none;
 }
+
+#button1{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 2.6%;
+	left: 15%;
+	top: 10%;
+}
+
+#button2{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.4%;
+	left: 17.4%;
+	top: 10%;
+}
+
+#button3{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.6%;
+	left: 21.3%;
+	top: 10%;
+}
+
+#button4{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.7%;
+	left: 25%;
+	top: 10%;
+}
+
+#button5{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.6%;
+	left: 28.75%;
+	top: 10%;
+}
+
+#button6{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.3%;
+	left: 32.4%;
+	top: 10%;
+}
+
+#button7{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.8%;
+	left: 35.8%;
+	top: 10%;
+}
+
+#button8{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 4%;
+	left: 39.7%;
+	top: 10%;
+}
+
+#button9{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.4%;
+	left: 43.8%;
+	top: 10%;
+}
+
+#button10{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.5%;
+	left: 47.3%;
+	top: 10%;
+}
+
+#button11{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.5%;
+	left: 50.9%;
+	top: 10%;
+}
+
+#button12{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.6%;
+	left: 54.5%;
+	top: 10%;
+}
+
+#button13{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.4%;
+	left: 58.15%;
+	top: 10%;
+}
+
+#button14{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.6%;
+	left: 61.7%;
+	top: 10%;
+}
+
+#button15{
+	position: absolute;
+	opacity: 0;
+	z-index: 10;
+	height: 3%;
+	width: 3.8%;
+	left: 65.4%;
+	top: 10%;
+}
+
+#button16{
+	position: absolute;
+	z-index: 10;
+	height: 3%;
+	width: 3.5%;
+	left: 69.3%;
+	top: 10%;
+	opacity: 0;
+}
+
+#button17{
+	position: absolute;
+	z-index: 10;
+	height: 3%;
+	width: 3.1%;
+	left: 72.9%;
+	top: 10%;
+	opacity: 0;
+}
+
+#button18{
+	position: absolute;
+	z-index: 10;
+	height: 3%;
+	width: 3.2%;
+	left: 76.1%;
+	top: 10%;
+	opacity: 0;
+}
+

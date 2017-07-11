@@ -55,24 +55,24 @@ enableClickAll: function(){
 /* activateEvents: Calls this method to add EventListener to an elements. When an element is 
 clicked corresponding function gets executed. */
 activateEvents: function(){
-	this.addClickEvent("piece1", function() { view.func1()});
-	this.addClickEvent("piece2",function(){view.func2()});
-	this.addClickEvent("piece3",function(){view.func3()});
-	this.addClickEvent("piece4",function(){view.func4()});
-	this.addClickEvent("piece5",function(){view.func5()});
-	this.addClickEvent("piece6",function(){view.func6()});
-	this.addClickEvent("piece7",function(){view.func7()});
-	this.addClickEvent("piece8",function(){view.func8()});
-	this.addClickEvent("piece9",function(){view.func9()});
-	this.addClickEvent("piece10",function(){view.func10()});
-	this.addClickEvent("piece11",function(){view.func11()});
-	this.addClickEvent("piece12",function(){view.func12()});
-	this.addClickEvent("piece13",function(){view.func13()});
-	this.addClickEvent("piece14",function(){view.func14()});
-	this.addClickEvent("piece15",function(){view.func15()});
-	this.addClickEvent("piece16",function(){view.func16()});
-	this.addClickEvent("piece17",function(){view.func17()});
-	this.addClickEvent("piece18",function(){view.func18()});
+	this.addClickEvent("button1", function() { view.func1()});
+	this.addClickEvent("button2",function(){view.func2()});
+	this.addClickEvent("button3",function(){view.func3()});
+	this.addClickEvent("button4",function(){view.func4()});
+	this.addClickEvent("button5",function(){view.func5()});
+	this.addClickEvent("button6",function(){view.func6()});
+	this.addClickEvent("button7",function(){view.func7()});
+	this.addClickEvent("button8",function(){view.func8()});
+	this.addClickEvent("button9",function(){view.func9()});
+	this.addClickEvent("button10",function(){view.func10()});
+	this.addClickEvent("button11",function(){view.func11()});
+	this.addClickEvent("button12",function(){view.func12()});
+	this.addClickEvent("button13",function(){view.func13()});
+	this.addClickEvent("button14",function(){view.func14()});
+	this.addClickEvent("button15",function(){view.func15()});
+	this.addClickEvent("button16",function(){view.func16()});
+	this.addClickEvent("button17",function(){view.func17()});
+	this.addClickEvent("button18",function(){view.func18()});
 	this.addClickEvent("rod_button1",function(){view.movement1()});
 	this.addClickEvent("rod_button2",function(){view.movement2()});
 },
