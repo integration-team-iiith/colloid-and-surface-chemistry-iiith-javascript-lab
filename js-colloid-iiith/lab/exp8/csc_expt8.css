@@ -75,7 +75,7 @@ h3{
 	height: 50%;
 }
 
-#button1{
+#stir_button{
 	position: absolute;
 	height: 30%;
 	z-index: 11;
@@ -84,7 +84,7 @@ h3{
 	width: 1.6%;
 }
 
-#button2{
+#heat_button{
 	position: absolute;
 	z-index: 11;
 	top: 616%;
@@ -116,10 +116,10 @@ h3{
 #magnet_arrow{
 	position: absolute;
 	display: none;
-	top: 120%;
+	top: 153%;
 	left: 50%;
-	height: 380%;
-	width: 11.5%;
+	height: 310%;
+	width: 13.8%;
 }
 
 #heater_txt{
@@ -236,10 +236,10 @@ h3{
 	position: absolute;
 	opacity: 0;
 	z-index: 4;
-	top: 500%;
+	top: 495%;
 	left: 62.2%;
-	width: 5.5%;
-	height: 100%;
+	width: 5.6%;
+	height: 88%;
 }
 
 #drop{
@@ -257,7 +257,7 @@ h3{
 	position: absolute;
 	z-index: 3;
 	display: none;
-	left: 67%;
+	left: 67.2%;
 	top: 400%;
 	height: 140%;
 	width: 10%;

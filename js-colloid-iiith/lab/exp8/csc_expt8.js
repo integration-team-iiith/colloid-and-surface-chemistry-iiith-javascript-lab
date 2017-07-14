@@ -7,25 +7,21 @@ var x=1;
 /*This method is called when the page is loaded.*/
 
 window.onload = function(){ 
-    initial_function();
+	addPointer("#flask");
     addclickEvents();
 }
 
-function initial_function(){
-	$("#magnet_arrow").rotate({angle:260});
-	addPointer("flask");
+// move: Calls this method to move an element in a straight line.
+function move(id,left,top,time){
+        $(id).velocity({translateX: left+"%",translateY: top+"%"},{duration: time});
 }
 
-// animateDirection_1: Calls this method to move an element in a straight line.
-function animate(id,left,top,time){
-        $(id).velocity({translateX: left,translateY: top},{duration: time});
-}
-	
+// addPointer: Adds a pointer to the object to be clicked
 function addPointer(Id){
 	$(Id).css("cursor","pointer");
 }
 
-
+// removePointer: To remove the pointer from the object when no longer needed
 function removePointer(Id){
 	$(Id).css("cursor","auto");
 }
@@ -33,69 +29,74 @@ function removePointer(Id){
 //This function adds click events to all clickable objects
 function addclickEvents(){
     document.getElementById("flask").addEventListener("click", function() {
-            callFlask();
+        callFlask();
     }, false);
     document.getElementById("magnet").addEventListener("click", function() {
     	callMagnet();
     }, false);
-    document.getElementById("button2").addEventListener("click", function() {
-    	callHeater2();
+    document.getElementById("heater_button").addEventListener("click", function() {
+    	callHeater();
     }, false);
-    document.getElementById("button1").addEventListener("click", function() {
-    	callHeater1();
+    document.getElementById("stir_button").addEventListener("click", function() {
+    	callStir();
     }, false);
     document.getElementById("pipette").addEventListener("click", function() {
     	callPipette();
     }, false);
 }
 
+
+// This function moves the flask from air to the heater and displays the magnet
 function callFlask(){
 	if(step_no == 0){
 		step_no++;
-		$("#flsk_arrow").hide();
-		$("#flsk_txt").hide();
-		animate("#flask",519.1,135.5,1500);
+		$("#flsk_arrow").hide();  // Arrow pointing to the flask
+ 		$("#flsk_txt").hide();	// Text regarding the flask
+		move("#flask",211.5,80,1500); // Move the flask
 		setTimeout(function(){
 			$("#change").html("Click on the Magnetic Bead to drop it in the Flask..");
-			$("#magnet").show();
-			$("#magnet_txt").show();
-			$("#magnet_arrow").show();
+			$("#magnet").show();	// Display the magnet
+			$("#magnet_txt").show();	// Display the text regarding the magnet
+			$("#magnet_arrow").show();	// Display the arrow which points to the magnet
 		},1500);
-		removePointer(flask);
-		addPointer(magnet);
+		removePointer(flask);	// Remove the pointer from the flask
+		addPointer(magnet);		// Add pointer to the magnet 
 	}
 }
 
+// This function drops the magnet into the flask 
 function callMagnet(){
 	if(step_no == 1){
 		step_no++;
-		$("#magnet_arrow").hide();
-		$("#magnet_txt").hide();
-		animate("#magnet",0,238.4,800);
+		$("#magnet_arrow").hide();	// Hide the arrow 
+		$("#magnet_txt").hide();	// Hide the text
+		move("#magnet",0,4800,800);	// Move the magnet into the flask
 		setTimeout(function() {
 			$("#change").html("Click on the Heater Switch to turn the Magnetic Heater On....");
-			$("#heater_txt").show();
-			$("#heater_arrow").show();
+			$("#heater_txt").show();	// Show the text regarding the heater
+			$("#heater_arrow").show();	// Show the arrow which points to the heater button
 		}, 800);
 		removePointer(magnet);
-		addPointer(button2);
+		addPointer(heater_button);
 	}
 }
 
-function callHeater2(){
+// This function hides heater related objects and displays stirrer related objects
+function callHeater(){
 	if(step_no == 2){
 		step_no++;	
-		$("#heater_arrow").hide();
-		$("#heater_txt").hide();
-		$("#stir_txt").show();
-		$("#stir_arrow").show();
+		$("#heater_arrow").hide();	// Hide arrow pointing to heater
+		$("#heater_txt").hide();	// Hide text regarding heater
+		$("#stir_txt").show();		// Show text regarding the stirrer
+		$("#stir_arrow").show();	// Show arrow pointing to the stirrer button
 		$("#change").html("Click on the Stirrer Switch to turn the Magnetic Stirrer On..");
-		removePointer(button2);
-		addPointer(button1);
+		removePointer(heater_button);	// Remove pointer from heater button
+		addPointer(stir_button);	// Add pointer to the stir button
 	}
 }
 
-function callHeater1(){
+// This function provides the effect of rotating magnet and displays the pipette and the beaker
+function callStir(){
 	if(step_no == 3){
 		step_no++;	
 		$("#stir_arrow").hide();
@@ -112,12 +113,17 @@ function callHeater1(){
 			$("#beaker_water").show();
 			$("#beaker_txt").show();
 		}, 1500);
-		removePointer(button1);
+		removePointer(stir_button);
 		addPointer(pipette);
 	}
 }
 
+//This function moves the pipette from air into the beaker
+// When it is clicked again. it moves back to its original position
+// When it is clicked again, it moves towards the flask containing the magnet
+// When clicked again, it creates the effect of drops of liquid falling into the flask
 function callPipette(){
+	// Move the pipette from air into the beaker
 	if(step_no == 4){
 		step_no++;
 		$("#pipette_arrow").hide();
@@ -132,13 +138,14 @@ function callPipette(){
 			$("#pipette_arrow").show();
 			$("#change").html("Click on the pipette to draw 10ml of tri-sodium citrate solution from the beaker...");
 		}, 1000);
-		animate("#pipette",-170,154,1000);
+		move("#pipette",-310,170,1000);
 	}
+	// Reduce the volume of the beaker and move the pipette back to its original position
 	else if(step_no == 5){
 		$("#beaker_water").velocity({ 
 			height: "30%",
-			translateY: 21.3,},
-			{ duration: 1000});
+			translateY: "110%",},
+			{ duration: 500});
 		step_no++;
 		$("#pipette_arrow").hide();
 		$("#pipette_txt").hide();
@@ -148,7 +155,7 @@ function callPipette(){
 		$("#pipette_txt").css("top","500%");
 		$("#pipette_txt").css("left","30%");
 		setTimeout(function() {
-			animate("#pipette",5,-10,1000);
+			move("#pipette",5,-10,1000);
 			setTimeout(function() {
 				$("#pipette_txt").show();
 				$("#pipette_arrow").show();
@@ -156,6 +163,7 @@ function callPipette(){
 			}, 1000);
 		}, 1000);
 	}
+	// Move the pipette towards the flask containing the magnet
 	else if( step_no == 6){
 		step_no++;
 		$("#pipette_arrow").hide();
@@ -164,7 +172,7 @@ function callPipette(){
 		$("#pipette_txt").hide();
 		$("#pipette_txt").css("top","430%");
 		$("#pipette_txt").css("left","44%");
-		animate("#pipette",190,-50,1000);
+		move("#pipette",348,-55,1000);
 		setTimeout(function() {
 			$("#change").html("Click on the pipette to add tri-sodium citrate solution, drop by drop to boiling AgNO<sub>3</sub> solution in the flask...");	
 			$("#drop").show();
@@ -172,27 +180,28 @@ function callPipette(){
 			$("#pipette_txt").show();
 		}, 1000);
 	}
+	// Creates the effect of drops of liquid falling into the beaker
 	else if( step_no == 7){
 		$("#pipette_arrow").hide();
 		$("#pipette_txt").hide();
 		removePointer(pipette);
 		step_no++;
-		$("#drop").animate({ top: 306.7},500);
+		$("#drop").animate({ top: "506.7%"},500);
 		setTimeout(function() {
-			$("#drop").animate({ top: 241.4},1);
-			$("#drop").animate({ top: 306.7},500);
+			$("#drop").animate({ top: "385.4%"},1);
+			$("#drop").animate({ top: "506.7%"},500);
 			setTimeout(function() {
-				$("#drop").animate({ top: 241.4},1);
-				$("#drop").animate({ top: 306.7},500);
+				$("#drop").animate({ top: "385.4%"},1);
+				$("#drop").animate({ top: "506.7%"},500);
 				setTimeout(function() {
-					$("#drop").animate({ top: 241.4},1);
-					$("#drop").animate({ top: 306.7},500);
+					$("#drop").animate({ top: "385.4%"},1);
+					$("#drop").animate({ top: "506.7%"},500);
 					setTimeout(function() {
-						$("#drop").animate({ top: 241.4},1);
-						$("#drop").animate({ top: 306.7},500);
+						$("#drop").animate({ top: "385.4%"},1);
+						$("#drop").animate({ top: "506.7%"},500);
 						setTimeout(function() {
-							$("#drop").animate({ top: 241.4},1);
-							$("#drop").animate({ top: 306.7},500);
+							$("#drop").animate({ top: "385.4%"},1);
+							$("#drop").animate({ top: "506.7%"},500);
 							setTimeout(function() {
 								$("#drop").hide();
 								$("#txt").show();
