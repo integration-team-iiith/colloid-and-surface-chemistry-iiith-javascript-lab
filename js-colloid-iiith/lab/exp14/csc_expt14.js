@@ -26,6 +26,12 @@ enableClickEvent: function(id){
 },
 
 // animateDirection_1: Calls this method to move an element in a straight line.
+move: function(id,top,left,time){
+        $(id).velocity({translateX: top+"%",translateY: left+"%"},{duration: time});
+},
+
+
+// animateDirection_1: Calls this method to move an element in a straight line.
 animate: function(id,top,left,time){
         $(id).velocity({translateX: top,translateY: left},{duration: time});
 },
