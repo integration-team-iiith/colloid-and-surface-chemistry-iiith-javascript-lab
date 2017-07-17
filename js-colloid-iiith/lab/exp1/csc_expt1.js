@@ -17,7 +17,7 @@ window.onload = function(){
 }
 
 function initial_function(){
-	$("#B_arrow").rotate({angle:345});
+	$("#beak_arrow").rotate({angle:345});
 	$("#g_arrow").rotate({angle:30});
 	$("#con_arrow").rotate({angle:17});
 	addPointer(beaker);
@@ -28,6 +28,11 @@ function changeText(){
 	{
         $("#change").html("Click on the FeCl<sub>3</sub> Powder to add it to the beaker containing water.");
 	}
+}
+
+// move: Calls this method to move an element in a straight line.
+function move(id,left,top,time){
+        $(id).velocity({translateX: left+"%",translateY: top+"%"},{duration: time});
 }
 
 // This function is a general method used to move images from initial position to final position.
@@ -123,18 +128,10 @@ It moves the beaker from air to the table. */
 function beakr(){
 	if(step_no==0)
     {
-        elem = document.getElementById("beaker");
-        //Detect the initial position of the beaker 
-        initial_top = Math.round($('#beaker').position().top);
-        initial_left = Math.round($('#beaker').position().left);
-        step_top=1;
-        step_left=1;
-        final_top=361;
-        type_of_movement=0;
-        $("#B_arrow").hide();
+        $("#beak_arrow").hide();
         $("#beak").hide();
         //Move the beaker from the air onto the table
-        moveImage();
+        move("#beaker",170,167,1000);	
         setTimeout(callFlask,1500);
         setTimeout(callBeaker,2300)
         step_no++;
@@ -150,17 +147,8 @@ function beakr(){
 function callFlask(){
 	elem=document.getElementById("flask");
 	$("#flask").show();
-	//Detect the initial position of the flask
-	initial_top = Math.round($("#flask").position().top);
-    initial_left = Math.round($("#flask").position().left);
-    step_top=-0.5;
-    step_left=0;
-    final_top=260;
-    type_of_movement=1;
-    //Move the flask upwards
-    moveImage();
     x=1;
-    id1 = setInterval(flaskEmpty,50);
+    id1 = setInterval(flaskEmpty,60);
 }
 
 //This function is responsible for the motion of the flask
@@ -187,17 +175,17 @@ function flaskEmpty(){
 
 //This function gives the effect of filling beaker.
 function callBeaker(){
-	$("#B_water").show();
+	$("#beak_water").show();
 	$("#flsk").show();
 	x=24;
-	id2=setInterval(fillBeaker,50);
+	id2=setInterval(fillBeaker,70);
 }
 
 //This function is responsible for the filling of water inside the beaker
 function fillBeaker(){
 	var beaker=[],i;
 	i=23;
-	img=$("#B_water")[0];
+	img=$("#beak_water")[0];
 	for(i=24;i<=50;i++)
 		beaker[i]="img_exp1/sprites/water_filling_beaker/" + i + ".png";
 	if(x < beaker.length)
@@ -217,15 +205,8 @@ function wtag(){
 	elem=document.getElementById('water_tag');
 	$("#water_tag").show();
     $("#water_tag").css("opacity",1);
-    //Detect the initial positon of the Water tag
-	initial_top = Math.round($("#water_tag").position().top);
-    initial_left = Math.round($("#water_tag").position().left);
-    step_top=-0.5;
-    step_left=0;
-    final_top=398;
-    type_of_movement=1;
     //Move the water tag from bottom of the beaker towards the top
-    moveImage();
+    move("#water_tag",0,-90,500);
     setTimeout(function(){
 	$("#water_tag").hide();
     },1100);
@@ -244,7 +225,7 @@ function Powder(){
 	$("#beaker").hide();
 	$("#spoon").hide();
 	$("#powder_spoon").hide();
-	$("#B_water").hide();
+	$("#beak_water").hide();
 	$("#beak_spoon").show();
 	$("#rd").show();
 	removePointer(fecl3_powder);
@@ -273,9 +254,9 @@ function callSpoon(){
 		$("#fecl3_powder").hide();
 		$("#powder_arrow").hide();
 		$("#fecl3_text").hide();
+		$("#rd").hide();
 		setTimeout(function(){
 			$("#rod").show();
-			$("#rd").hide();
 			$("#g_txt").show();
 			$("#g_arrow").show();
 			$("#change").html("Click on the Glass Rod to stir the FeCl<sub>3</sub> Soultion....")
@@ -293,8 +274,8 @@ function callRod(){
 		$("#grod").show();
 		$("#g_txt").hide();
 		$("#g_arrow").hide();
-		id6=setInterval(stirRod,100);
 		x=2;
+		id6=setInterval(stirRod,100);
 		setTimeout(moveFullBeak,5000);
 		step_no++;
 		removePointer(rod);
@@ -327,17 +308,8 @@ function stirRod(){
 
 //This funciton moves the beaker to the corner of the table and shows the flask containing water
 function moveFullBeak(){
-	//Detect the initial location of the beaker
-	initial_top = Math.round($("#beak_spoon").position().top);
-    initial_left = Math.round($("#beak_spoon").position().left);
-    step_top=0;
-    step_left=-0.7;
-    final_top=0;
-    final_left=390;
-    type_of_movement=3;
-    elem=document.getElementById("beak_spoon");
     //Move the beaker towards the edge of the table
-    moveImage();
+    move("#beak_spoon",-95,0,1000);
     setTimeout(function(){
     $("#div_fecl3").show();
 	$("#con_arrow").show();
@@ -351,17 +323,8 @@ function moveFullBeak(){
     It moves the flask from air to the top of heater/stirrer. */
 function callConFlsk(){
 	if(step_no==2){
-	//Detect the initial location of the flask
-	initial_top = Math.round($("#water_flask").position().top);
-    initial_left = Math.round($("#water_flask").position().left);
-    step_top=1;
-    step_left=0;
-    final_top=278;
-    final_left=0;
-    type_of_movement=0;
-    elem=document.getElementById("water_flask");
     //Move the flask from the air onto the machine
-    moveImage();
+    move("#water_flask",0,160,1000);
     setTimeout(function(){
     $("#magnet").show();
 	$("#mag_arrow").show();
@@ -380,27 +343,18 @@ function callConFlsk(){
 //It moves the magnet from air into the bottom of the flask.
 function callMagnet(){
 	if(step_no==3){
-	//Detect the initital location of the magnet 
-	initial_top = Math.round($("#magnet").position().top);
-    initial_left = Math.round($("#magnet").position().left);
-    step_top=1;
-    step_left=0;
-    final_top=354;
-    final_left=0;
-    type_of_movement=0;
-    elem=document.getElementById("magnet");
-    //Move the magnet from the air into the flask
-    moveImage();
-    step_no++;
-	$("#mag_arrow").hide();
-	$("#mag_txt").hide();
-	setTimeout(function(){
-	$("#change").html("Switch on the Heater of the Magnetic Stirrer & Heater ...");
-	$("#heat_arrow").show();
-	$("#heat_txt").show();
+	    //Move the magnet from the air into the flask
+	    move("#magnet",0,1990,1000);
+	    step_no++;
+		$("#mag_arrow").hide();
+		$("#mag_txt").hide();
+		setTimeout(function(){
+			$("#change").html("Switch on the Heater of the Magnetic Stirrer & Heater ...");
+			$("#heat_arrow").show();
+			$("#heat_txt").show();
 		},1100);
-	removePointer(magnet);
-	addPointer(button2);
+		removePointer(magnet);
+		addPointer(button2);
 	}
 
 }
@@ -433,33 +387,26 @@ function callButton2(){
 		$("#pipette").show();
 		$("#beak_spoon").attr('src',"img_exp1/shapes/beak.png");
 		$("#div_fecl3").hide();
-		$("#beak_spoon").css("left","21.33%");
-		$("#beak_spoon").css("top","266%");
+		$("#beak_spoon").css("left","33%");
+		$("#beak_spoon").css("top","267%");
 		$("#beak_spoon").css("height","60%");
 		$("#pip_arrow").show();
 		$("#pip_txt").show();
-		//Detect the initial location of the Beaker containing FeCl3 solution
-		initial_top = Math.round($("#beak_spoon").position().top);
-    	initial_left = Math.round($("#beak_spoon").position().left);	
-	    step_top=0;
- 	   	step_left=1.3;
-   		final_top=0;
-   		final_left=510;
-  		type_of_movement=4;
- 	   	elem=document.getElementById("beak_spoon");
  	   	//Move the beaker
-   		moveImage();
+   		move("#beak_spoon",48,0,1000);
    		step_no++;
    		setTimeout(function(){
-   			$("#div_fecl3").css("left","37.446%");
+   			$("#div_fecl3").css("left","36.5%");
    			$("#div_fecl3").show();
-   			$("#beaker").css("left","43.09%");
-   			$("#beaker").css("top","256.4%");
+   			$("#beaker").css("width","8.2%");
+   			$("#beaker").css("left","29.2%");
+   			$("#beaker").css("top","110%");
    			$("#beaker").show();
    			$("#red_sol").show();
    			$("#beak_spoon").hide();
-   			$("#B_water").css("left","45.8%");
-   			$("#B_water").show();
+   			$("#beak_water").css("width","3.4%");
+   			$("#beak_water").css("left","45.7%");
+   			$("#beak_water").show();
    		},1700)
 	}
 }
@@ -486,25 +433,8 @@ function callButton1(){
 
 //This function is gives the animation of boiling water.
 function boil_water(){
-	i=1;
-	img=document.getElementById("heat_bubb");
-	var water=[]
-	for(i=0;i<=80;i++)
-	{
-		if(i%2){
-			water[i]="img_exp1/heat_bubbles/1.png";
-		}
-		else{
-			water[i]="img_exp1/heat_bubbles/2.png"
-		}
-	}
 	x++;
-	if(x<water.length)
-	{
-		img.src=water[x];
-	}
 	if(x==10){
-		x=1;
 		$("#heat_arrow").show();
 		$("#change").html("Now that the water gas started boiling, Switch off the Heater.....");
 		$("#heat_txt").show();
@@ -519,77 +449,44 @@ function boil_water(){
 function callPipette(){
 	if(step_no==7){
 		step_no++;
-		//Detect the current position of the pipette 
-		initial_top = Math.round($("#pipette").position().top);
-    	initial_left = Math.round($("#pipette").position().left);	
-	    step_top=1;
- 	   	step_left=-0.2;
-   		final_top=350;
-   		final_left=100;
-  		type_of_movement=0;
- 	   	elem=document.getElementById("pipette");
  	   	//Move the pipette into the beaker containing the FeCl3 solution
-   		moveImage();
+   		move("#pipette",-96,210,1000);
    		setTimeout(function(){
    			$("#pip_txt").hide();
    			$("#pip_arrow").hide();
    		},50)
    		//Decrease the volume of the FeCl3 solution in the beaker.
    		setTimeout(function(){
-   		//Detect the current position of the FeCl3 solution
-   		initial_top = Math.round($("#red_sol").position().top);
-    	initial_left = Math.round($("#red_sol").position().left);	
-	    step_top=0.4;
- 	   	step_left=0;
-   		final_top=447;
-   		final_left=0;
-  		type_of_movement=0;
- 	   	elem=document.getElementById("red_sol");
- 	   	//Move the FeCl3 solution downwards to give an effect of decrease in volume in the beaker
-   		moveImage();
+	 	   	//Move the FeCl3 solution downwards to give an effect of decrease in volume in the beaker
+   			move("#red_sol",0,43,400);
    		},1200)
    		//Move the pipette back to its position
    		setTimeout(function(){
-   		//Detect the current location of the pipette
-   		initial_top = Math.round($("#pipette").position().top);
-    	initial_left = Math.round($("#pipette").position().left);	
-	    step_top=-1;
- 	   	step_left=0.2;
-   		final_top=142;
-   		final_left=100;
-  		type_of_movement=1;
- 	   	elem=document.getElementById("pipette");
- 	   	//Move the pipette into the air
-   		moveImage();
+ 	   		//Move the pipette into the air
+   			move("#pipette",-30,-1,1000);
    		},1700)
    		setTimeout(function(){
+   			$("#pip_txt").css("left","30%");
+   			$("#pip_txt").css("top","200%");
    			$("#pip_txt").show();
+   			$("#pip_arrow").css("left","35%");
    			$("#pip_arrow").show();
    			$("#change").html("Click on the pipette again to add the FeCl<sub>3</sub> taken from the beaker, to the hot water in conical flask, drop by drop.....")
    		},3000)
    	}
    	//Move the pipette towards the flask containing the magnet 
-   		else if(step_no==8)
+	else if(step_no==8)
    	{
    		step_no++;
    		$("#pip_txt").hide();
    		$("#pip_arrow").hide();
-   		//Detect the current location of the pipette
-   		initial_top = Math.round($("#pipette").position().top);
-    	initial_left = Math.round($("#pipette").position().left);	
-	    step_top=0.1;
- 	   	step_left=1.4;
-   		final_top=152;
-   		final_left=100;
-  		type_of_movement=0;
- 	   	elem=document.getElementById("pipette");
-   		//Move the pipette towards the flask containing the magnet 
-   		moveImage();
+   	 	//Move the pipette towards the flask containing the magnet 
+   		move("#pipette",285,10,1000);
    		setTimeout(function(){
    			$("#red_drop").show();
    			$("#pip2_arrow").show();
-   			$("#pip_txt").css("left","26%");
-   			$("#pip_txt").css("top","239%");
+   			$("#pip_txt").css("left","24%");
+   			$("#pip_txt").css("top","225%");
    			$("#pip_txt").show();
    		},1000)
 	}
@@ -597,16 +494,16 @@ function callPipette(){
 	else if(step_no==9){
 		step_no++;
 	   	//Detect the location of the drop of FeCl3 solution 
-		initial_top = Math.round($("#red_drop").position().top);
-    	initial_left = Math.round($("#red_drop").position().left);	
-	    step_top=0.6;
- 	   	step_left=0;
-   		final_top=340;
-   		final_left=100;
-  		type_of_movement=0;
- 	   	elem=document.getElementById("red_drop");
+		// initial_top = Math.round($("#red_drop").position().top);
+  //   	initial_left = Math.round($("#red_drop").position().left);	
+	 //    step_top=0.6;
+ 	//    	step_left=0;
+  //  		final_top=320;
+  //  		final_left=100;
+  // 		type_of_movement=0;
+ 	//    	elem=document.getElementById("red_drop");
  	   	//Move the drop into the flask
-   		moveImage();
+   		move("#red_drop",0,400,300);
    		setTimeout(function(){
    			$("#red_flask").show();
    			$("#mag").css("opacity","0.07")
@@ -614,7 +511,7 @@ function callPipette(){
    			$("#pip2_arrow").hide();
    			$("#feoh3_txt").show();
    			$("#change").html("The colloid is thus obtained.....")
-   		},1000)
+   		},400)
    		removePointer(pipette);
    		addPointer(red_flask);
 	}
@@ -639,29 +536,7 @@ function callCircle(){
 			$("#circle").css("left","36%");
 			$("#circle").css("top","124%");
 			$("#coll").show();
-			// x=1;
-			// id7=setInterval(moveBubb,50);
 		},50);
 
 	}
 }
-
-//This function is responsible for the colloid particle movement
-// function moveBubb(){
-// 	img=document.getElementById("coll_bubb");
-// 	var bubb=[]
-// 	for(i=1;i<=48;i++)
-// 	{
-// 		bubb[i]="img_exp1/trans_bubb/" + i + ".png";
-// 	}
-// 	if(x<bubb.length)
-// 	{
-// 		img.src=bubb[x];
-// 		x++;
-// 	}
-// 	else
-// 	{
-// 		x=1;
-// 	}
-
-// }
