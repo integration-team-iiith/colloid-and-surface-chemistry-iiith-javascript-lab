@@ -84,6 +84,7 @@ activateEvents: function(){
 },
 
 func1: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
 	setTimeout(function() {
@@ -91,7 +92,6 @@ func1: function(){
 	}, 700);
 	view.button_no=1;
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -102,6 +102,7 @@ func1: function(){
 },
 
 func2: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
 	view.button_no=2;
@@ -109,7 +110,6 @@ func2: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -120,6 +120,7 @@ func2: function(){
 },
 
 func3: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
 	setTimeout(function() {
@@ -127,7 +128,6 @@ func3: function(){
 	}, 700);
 	view.button_no=3;
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -138,6 +138,7 @@ func3: function(){
 },
 
 func4: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=4;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -145,7 +146,6 @@ func4: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -156,6 +156,7 @@ func4: function(){
 },
 
 func5: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=5;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -163,7 +164,6 @@ func5: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#conc").hide();
 	$("#hand1").hide();
@@ -174,6 +174,7 @@ func5: function(){
 },
 
 func6: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=6;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -181,7 +182,6 @@ func6: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -192,6 +192,7 @@ func6: function(){
 },
 
 func7: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=7;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -199,7 +200,6 @@ func7: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -210,6 +210,7 @@ func7: function(){
 },
 
 func8: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=8;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -217,7 +218,6 @@ func8: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -228,6 +228,7 @@ func8: function(){
 },
 
 func9: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=9;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -235,7 +236,6 @@ func9: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -246,6 +246,7 @@ func9: function(){
 },
 
 func10: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=10;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -253,7 +254,6 @@ func10: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -264,6 +264,7 @@ func10: function(){
 },
 
 func11: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=11;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -271,7 +272,6 @@ func11: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -282,6 +282,7 @@ func11: function(){
 },
 
 func12: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=12;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -289,7 +290,6 @@ func12: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -300,6 +300,7 @@ func12: function(){
 },
 
 func13: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=13;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -307,7 +308,6 @@ func13: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -318,6 +318,7 @@ func13: function(){
 },
 
 func14: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=14;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -325,7 +326,6 @@ func14: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -336,6 +336,7 @@ func14: function(){
 },
 
 func15: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=15;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -343,7 +344,6 @@ func15: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -354,6 +354,7 @@ func15: function(){
 },
 
 func16: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=16;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -361,7 +362,6 @@ func16: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -372,6 +372,7 @@ func16: function(){
 },
 
 func17: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=17;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -379,7 +380,6 @@ func17: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -390,6 +390,7 @@ func17: function(){
 },
 
 func18: function(){
+	view.removeClickAll();
 	$("#piece"+view.button_no).css("opacity","0");
 	view.button_no=18;
 	$("#pour").attr("src","images/sprites/flask_pour/pouring.gif");
@@ -397,7 +398,6 @@ func18: function(){
 		$("#beak_water").attr("src","images/sprites/beak_fill_water/filling.gif");
 	}, 700);
 	$("#piece"+view.button_no).css("opacity","0.5 ");
-	view.removeClickAll();
 	view.step_no=2;
 	$("#hand1").hide();
 	$("#conc").hide();
@@ -444,7 +444,7 @@ movement2: function(){
 		this.index1=65;
 		$("#click").hide();
 		$("#hand3").hide();
-		setTimeout(function() {$("#readings").attr("src","images/sprites/readings/read1.png");}, 100);
+		setTimeout(function() {$("#readings").attr("src","images/sprites/readings/read0.png");}, 100);
 		id8=setInterval(function(){
 			images=[];
 			for(i=65;i<=140;i++){
