@@ -36,7 +36,7 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 * Using ActionScript to JavaScript transpilers like [AS3JS](http://as3js.org/). But, the problem with AS3JS is that, it converts ActionScript into some complex form of JavaScript. It is difficult to understand and to use the JavaScript files generated using AS3JS.
 
 * [Haxe](http://haxe.org/) is a cross-platform toolkit. It is similar to ActionScript and hence it is one of the easiest options for conversion, in particular if used through [OpenFL](http://www.openfl.org/). Haxe can compile to several languages including JavaScript. Some automatic conversion tools are currently available, such as as3hx and as3tohx, which convert a significant part of the code for you.
-* While searching for tools which can convert SWF files into HTML5, I came across a tool called [SWIFFY]() developed by Google. As per Wikipedia, Google Swiffy was a web-based tool developed by Google that converted SWF files to HTML5. Its main goal was to display Flash contents on devices that do not support Flash, such as iPhone, iPad, and Android Tablets. Swiffy was shut down July 1, 2016. It would be the perfect tool for the conversion. 
+* While searching for tools which can convert SWF files into HTML5, I came across a tool called [SWIFFY]() developed by Google. As per Wikipedia, Google Swiffy was a web-based tool developed by Google that converted SWF files to HTML5. Its main goal was to display Flash contents on devices that do not support Flash, such as iPhone, iPad, and Android Tablets. Swiffy was shut down July 1, 2016. It would have been the perfect tool for the conversion. 
 
 #### Method adopted
 
@@ -87,8 +87,6 @@ The continuing absence of an easy conversion process from Flash to HTML5 and inc
 * The JavaScript code is re-usable only for experiments of this lab and similar labs. For other labs same instructions can be followed to develop the skeleton code.
 
 * Since many images are used in these experiments, page takes time to load on certain machines. So in order to take care of performance factor, sprites can be used, to reduce the number of http requests for group of images. 
-
-* Sometimes we need to execute multiple functions parallelly. But, as per my current knowledge, JavaScript does not provide methods for parallel function execution. I am trying to find methods which can make this parallel execution possible. Recently, I found that multi-threading is possible in JavaScript using the method of [Web-Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). I don't know whether it will work or not, but I am willing to take a chance and explore that method.
 
 #### References
 * [http://www.w3schools.com/](http://www.w3schools.com/) for basic HTML CSS and JavaScript.
