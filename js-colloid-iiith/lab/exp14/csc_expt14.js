@@ -470,9 +470,108 @@ movement2: function(){
 	}
 },
 
+hover_func: function(){
+			$("#button1").mouseover(function () {
+  				$("#piece1").attr('src', $("#piece1").data("hover"));
+			}).mouseout(function () {
+  			$("#piece1").attr('src', $("#piece1").data("src"));
+		});
+			$("#button2").mouseover(function () {
+  				$("#piece2").attr('src', $("#piece2").data("hover"));
+			}).mouseout(function () {
+  			$("#piece2").attr('src', $("#piece2").data("src"));
+		});
+			$("#button3").mouseover(function () {
+  				$("#piece3").attr('src', $("#piece3").data("hover"));
+			}).mouseout(function () {
+  			$("#piece3").attr('src', $("#piece3").data("src"));
+		});
+			$("#button4").mouseover(function () {
+  				$("#piece4").attr('src', $("#piece4").data("hover"));
+			}).mouseout(function () {
+  			$("#piece4").attr('src', $("#piece4").data("src"));
+		});
+			$("#button4").mouseover(function () {
+  				$("#piece4").attr('src', $("#piece4").data("hover"));
+			}).mouseout(function () {
+  			$("#piece4").attr('src', $("#piece4").data("src"));
+		});
+			$("#button5").mouseover(function () {
+  				$("#piece5").attr('src', $("#piece5").data("hover"));
+			}).mouseout(function () {
+  			$("#piece5").attr('src', $("#piece5").data("src"));
+		});
+			$("#button6").mouseover(function () {
+  				$("#piece6").attr('src', $("#piece6").data("hover"));
+			}).mouseout(function () {
+  			$("#piece6").attr('src', $("#piece6").data("src"));
+		});
+			$("#button7").mouseover(function () {
+  				$("#piece7").attr('src', $("#piece7").data("hover"));
+			}).mouseout(function () {
+  			$("#piece7").attr('src', $("#piece7").data("src"));
+		});
+			$("#button8").mouseover(function () {
+  				$("#piece8").attr('src', $("#piece8").data("hover"));
+			}).mouseout(function () {
+  			$("#piece8").attr('src', $("#piece8").data("src"));
+		});
+			$("#button9").mouseover(function () {
+  				$("#piece9").attr('src', $("#piece9").data("hover"));
+			}).mouseout(function () {
+  			$("#piece9").attr('src', $("#piece9").data("src"));
+		});
+			$("#button10").mouseover(function () {
+  				$("#piece10").attr('src', $("#piece10").data("hover"));
+			}).mouseout(function () {
+  			$("#piece10").attr('src', $("#piece10").data("src"));
+		});
+			$("#button11").mouseover(function () {
+  				$("#piece11").attr('src', $("#piece11").data("hover"));
+			}).mouseout(function () {
+  			$("#piece11").attr('src', $("#piece11").data("src"));
+		});
+			$("#button12").mouseover(function () {
+  				$("#piece12").attr('src', $("#piece12").data("hover"));
+			}).mouseout(function () {
+  			$("#piece12").attr('src', $("#piece12").data("src"));
+		});
+			$("#button13").mouseover(function () {
+  				$("#piece13").attr('src', $("#piece13").data("hover"));
+			}).mouseout(function () {
+  			$("#piece13").attr('src', $("#piece13").data("src"));
+		});
+			$("#button14").mouseover(function () {
+  				$("#piece14").attr('src', $("#piece14").data("hover"));
+			}).mouseout(function () {
+  			$("#piece14").attr('src', $("#piece14").data("src"));
+		});
+			$("#button15").mouseover(function () {
+  				$("#piece15").attr('src', $("#piece15").data("hover"));
+			}).mouseout(function () {
+  			$("#piece15").attr('src', $("#piece15").data("src"));
+		});
+			$("#button16").mouseover(function () {
+  				$("#piece16").attr('src', $("#piece16").data("hover"));
+			}).mouseout(function () {
+  			$("#piece16").attr('src', $("#piece16").data("src"));
+		});
+			$("#button17").mouseover(function () {
+  				$("#piece17").attr('src', $("#piece17").data("hover"));
+			}).mouseout(function () {
+  			$("#piece17").attr('src', $("#piece17").data("src"));
+		});
+			$("#button18").mouseover(function () {
+  				$("#piece18").attr('src', $("#piece18").data("hover"));
+			}).mouseout(function () {
+  			$("#piece18").attr('src', $("#piece18").data("src"));
+		});
+}
+
 }
 
 window.onload=function () {
-        view.activateEvents();
-        view.rotate();
+    view.activateEvents();
+    view.rotate();
+    view.hover_func();
 };
