@@ -44,7 +44,7 @@ resetPage: function(){
 //removes click events for all functions
 removeClickAll: function(){
 	for(i=1;i<=18;i++){
-		id4="piece"+ i;
+		id4="button"+ i;
 		view.removeClickEvent(id4);
 	}
 },
@@ -52,7 +52,7 @@ removeClickAll: function(){
 //enable click events for all functions
 enableClickAll: function(){
 	for(i=1;i<=18;i++){
-		id4="piece"+ i;
+		id4="button"+ i;
 		view.enableClickEvent(id4);
 	}
 },
