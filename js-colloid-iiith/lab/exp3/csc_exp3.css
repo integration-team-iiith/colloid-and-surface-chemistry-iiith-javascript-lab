@@ -42,6 +42,92 @@ bisc{
 
 #rst_btn{
 	position: absolute;
-	top: 2700%;
-	left: 46%;
+	top: 2800%;
+	left: 44%;
+}
+
+#div_btn1{
+	display: none;
+}
+
+#infobg{
+	position: absolute;
+	height: 630%;
+	width: 55.2%;
+	top: 1300%;
+	left: 22%;
+}
+
+#head{
+	position: absolute;
+	z-index: 3;
+	top: 705%;
+	left: 59.7%;
+	opacity: 0;
+	width: 6.74%;
+	height: 423%;
+}
+
+#tail{
+	position: absolute;
+	z-index: 3;
+	left: 30.3%;
+	top: 814%;
+	opacity: 0;
+	height: 273%;
+	width: 29.4%;
+}
+
+#micl{
+	position: absolute;
+	top: 700%;
+	left: 30%;
+	width: 36.75%;
+	height: 441%;
+}
+
+#tail_red{
+	position: absolute;
+	z-index: 2;
+	height: 382%;
+	width: 30.35%;
+	top: 767%;
+	left: 29.4%;
+	opacity: 0;
+}
+
+#head_red{
+	position: absolute;
+	z-index: 2;
+	width: 10%;
+	height: 680%;
+	top: 574%;
+	left: 58.58%;
+	opacity: 0;
+}
+
+#close_btn1{
+	position: absolute;
+	height: 141%;
+	width: 2.2%;
+	left: 74%;
+	top: 250%;
+}
+
+#infoh{
+	position: absolute;
+	left: 57.4%;
+	top: 1340%;
+	height: 700%;
+	width: 11.65%;
+	display: none;
+}
+
+#infotl{
+	position: absolute;
+	left: 29%;
+	top: 1340%;
+	height: 760%;
+	width: 31.35%;
+	display: none;
 }
