@@ -1,5 +1,5 @@
 html{
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 body{
@@ -10,10 +10,6 @@ h3{
 	text-align:center;
 	font-weight: bold;
 	font-size: 20px;
-}
-
-bisc{
-	color: #65C1FD;
 }
 
 #action{
@@ -42,7 +38,7 @@ bisc{
 
 #rst_btn{
 	position: absolute;
-	top: 2800%;
+	top: 2600%;
 	left: 44%;
 }
 
@@ -61,7 +57,7 @@ bisc{
 #head{
 	position: absolute;
 	z-index: 3;
-	top: 705%;
+	top: 605%;
 	left: 59.7%;
 	opacity: 0;
 	width: 6.74%;
@@ -72,7 +68,7 @@ bisc{
 	position: absolute;
 	z-index: 3;
 	left: 30.3%;
-	top: 814%;
+	top: 714%;
 	opacity: 0;
 	height: 273%;
 	width: 29.4%;
@@ -80,7 +76,7 @@ bisc{
 
 #micl{
 	position: absolute;
-	top: 700%;
+	top: 600%;
 	left: 30%;
 	width: 36.75%;
 	height: 441%;
@@ -91,7 +87,7 @@ bisc{
 	z-index: 2;
 	height: 382%;
 	width: 30.35%;
-	top: 767%;
+	top: 667%;
 	left: 29.4%;
 	opacity: 0;
 }
@@ -101,7 +97,7 @@ bisc{
 	z-index: 2;
 	width: 10%;
 	height: 680%;
-	top: 574%;
+	top: 474%;
 	left: 58.58%;
 	opacity: 0;
 }
@@ -117,7 +113,7 @@ bisc{
 #infoh{
 	position: absolute;
 	left: 57.4%;
-	top: 1340%;
+	top: 1140%;
 	height: 700%;
 	width: 11.65%;
 	display: none;
@@ -126,8 +122,189 @@ bisc{
 #infotl{
 	position: absolute;
 	left: 29%;
-	top: 1340%;
+	top: 1140%;
 	height: 760%;
 	width: 31.35%;
 	display: none;
+}
+
+#div_btn2{
+	display: none;
+}
+
+
+#blue_back{
+	position: absolute;
+	height: 2000%;
+	left: 25%;
+	width: 50%;
+	top: 310%;
+	background-color: #65C1FD;
+	opacity: 0.9;
+	display: none;
+}
+
+#spoon{
+	position: absolute;
+	top: 400%;
+	left: 60%;
+	width: 11.8%;
+	height: 370%;
+}
+
+#table{
+	position: absolute;
+	top: 1500%;
+	left: 22%;
+	height: 1033%;
+	width: 55.5%;
+}
+
+#dtr_arw{
+	position: absolute;
+	top: 800%;
+	left: 52%;
+	width: 11.7%;
+	height: 686%;
+}
+
+#pow{
+	position: absolute;
+	top: 1250%;
+	left: 37%;
+	width: 5.6%;
+	height: 194%;
+	display: none;
+}
+
+#rod{
+	position: absolute;
+	height: 750%;
+	top: 1200%;
+	left: 33%;
+	width: 11%;
+	display: none;
+}
+
+#stir{
+	position: absolute;
+	width: 12%;
+	top: 1190%;
+	height: 770%;
+	left: 32.6%;
+	display: none;
+}
+
+#str_rod{
+	position: absolute;
+	top: 1050%;
+	left: 44%;
+	width: 24%;
+	height: 280%;
+	display: none;
+}
+
+#mol{
+	position: absolute;
+	top: 1200%;
+	left: 53%;
+	width: 20%;
+	height: 405%;
+	display: none;
+}
+
+#micl1{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 38%;
+	left: 5%;
+}
+
+#micl2{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 50%;
+	left: 1%;
+}
+
+#micl3{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 70%;
+	left: 2%;
+}
+
+#micl4{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 83%;
+	left: -3%;
+}
+
+#micl5{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 30%;
+	left: -30%;
+}
+
+#micl6{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	left: -25%;
+	top: 50%;
+}
+
+#micl7{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 30%;
+	left: -35%;
+}
+
+#micl8{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 60%;
+	left: 50%;
+}
+
+#micl9{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	left: 45%;
+	top: 75%;
+}
+
+#micl10{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 30%;
+	left: 45%;
+}
+
+#micl11{
+	position: relative;
+	width: 13.6%;
+	height: 4.4%;
+	top: 50%;
+	left: 30%;
+}
+
+#close_btn2{
+	position: relative;
+	height: 7%;
+	width: 4%;
+	top: -2%;
+	left: 37%;
 }
