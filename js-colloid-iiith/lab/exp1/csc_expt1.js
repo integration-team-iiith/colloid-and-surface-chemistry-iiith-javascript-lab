@@ -131,7 +131,7 @@ function beakr(){
         $("#beak_arrow").hide();
         $("#beak").hide();
         //Move the beaker from the air onto the table
-        move("#beaker",170,167,1000);	
+        move("#beaker",170,157,1000);	
         setTimeout(callFlask,1500);
         setTimeout(callBeaker,2300)
         step_no++;
@@ -228,11 +228,13 @@ function Powder(){
 	$("#beak_water").hide();
 	$("#beak_spoon").show();
 	$("#rd").show();
+	$("#powder_arrow").hide();
+	$("#fecl3_text").hide();
 	removePointer(fecl3_powder);
 	addPointer(rod);
 	setTimeout(function(){
-	x=1;
-	id5=setInterval(callSpoon,100);
+		x=1;
+		id5=setInterval(callSpoon,100);
 	},2000);	
 }
 
@@ -252,8 +254,7 @@ function callSpoon(){
 	{
 		clearInterval(id5);
 		$("#fecl3_powder").hide();
-		$("#powder_arrow").hide();
-		$("#fecl3_text").hide();
+		
 		$("#rd").hide();
 		setTimeout(function(){
 			$("#rod").show();
@@ -481,7 +482,7 @@ function callPipette(){
    		$("#pip_txt").hide();
    		$("#pip_arrow").hide();
    	 	//Move the pipette towards the flask containing the magnet 
-   		move("#pipette",285,10,1000);
+   		move("#pipette",322,10,1000);
    		setTimeout(function(){
    			$("#red_drop").show();
    			$("#pip2_arrow").show();
