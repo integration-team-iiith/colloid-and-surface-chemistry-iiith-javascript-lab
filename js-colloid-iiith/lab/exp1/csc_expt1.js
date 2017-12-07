@@ -147,6 +147,7 @@ function beakr(){
 function callFlask(){
 	elem=document.getElementById("flask");
 	$("#flask").show();
+	$("#flsk").show();
     x=1;
     id1 = setInterval(flaskEmpty,60);
 }
@@ -176,7 +177,6 @@ function flaskEmpty(){
 //This function gives the effect of filling beaker.
 function callBeaker(){
 	$("#beak_water").show();
-	$("#flsk").show();
 	x=24;
 	id2=setInterval(fillBeaker,70);
 }
