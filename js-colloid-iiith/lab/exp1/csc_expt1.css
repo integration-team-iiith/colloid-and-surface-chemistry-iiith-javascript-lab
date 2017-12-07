@@ -10,6 +10,7 @@ h3 {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    cursor: default;
 }
 
 .narr {
@@ -27,6 +28,7 @@ h3 {
     text-align: center;
     padding-top: 7px;
     width: 100%;
+    cursor: default;
 }
 
 #beaker {
@@ -63,6 +65,7 @@ h3 {
     font-size: 1.8em;
     color: #00F;
     width: 7%;
+    cursor: default;
 }
 
 #flask {
@@ -97,6 +100,7 @@ h3 {
     text-align: center;
     font-size: 1.25em;
     display: none;
+    cursor: default;
 }
 
 #rst_btn {
@@ -144,6 +148,7 @@ h3 {
     display: none;
     font-size: 20px;
     width: 10%;
+    cursor: default;
 }
 
 #beak_spoon {
@@ -178,6 +183,7 @@ h3 {
     font-size: 1.15em;
     display: none;
     -webkit-text-size-adjust: none;
+    cursor: default;
 }
 
 #grod {
@@ -207,6 +213,7 @@ h3 {
     font-size: 20px;
     display: none;
     width: 10%;
+    cursor: default;
 }
 
 #div_fecl3 {
@@ -217,6 +224,7 @@ h3 {
     font-size: 18px;
     display: none;
     width: 10%;
+    cursor: default;
 }
 
 #water_flask {
@@ -246,6 +254,7 @@ h3 {
     top: 133%;
     width: 10%;
     display: none;
+    cursor: default;
 }
 
 #magnet {
@@ -276,6 +285,7 @@ h3 {
     font-size: 20px;
     display: none;
     width: 10%;
+    cursor: default;
 }
 
 #button1 {
@@ -325,6 +335,7 @@ h3 {
     left: 55.5%;
     width: 10%;
     display: none;
+    cursor: default;
 }
 
 #stir_arrow {
@@ -346,6 +357,7 @@ h3 {
     left: 62%;
     width: 10%;
     display: none;
+    cursor: default;
 }
 
 #heat_bubb {
@@ -391,6 +403,7 @@ h3 {
     top: 200%;
     width: 10%;
     display: none;
+    cursor: default;
 }
 
 #pip_arrow {
@@ -447,12 +460,13 @@ h3 {
     font-size: 18px;
     display: none;
     width: 10%;
+    cursor: default;
 }
 
 #circle {
     position: absolute;
     top: 174%;
-    left: 50%;
+    left: 51.5%;
     height: 130%;
     width: 28%;
     display: none;
@@ -460,7 +474,7 @@ h3 {
 
 #coll {
     position: absolute;
-    left: 40%;
+    left: 41.5%;
     top: 160%;
     height: 60%;
     width: 8%;

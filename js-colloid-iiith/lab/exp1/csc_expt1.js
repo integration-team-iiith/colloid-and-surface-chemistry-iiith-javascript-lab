@@ -528,13 +528,13 @@ function callCircle(){
 		//Shows the medium circle after 50ms
 		setTimeout(function(){
 			$("#circle").attr("src","img_exp1/shapes/circle2.png");
-			$("#circle").css("left","42%");
+			$("#circle").css("left","43.5%");
 			$("#circle").css("top","145%");
 		},50);
 		//Shows the bug crcle after 50ms
 		setTimeout(function(){
 			$("#circle").attr("src","img_exp1/shapes/272.png");
-			$("#circle").css("left","36%");
+			$("#circle").css("left","37.5%");
 			$("#circle").css("top","124%");
 			$("#coll").show();
 		},50);
