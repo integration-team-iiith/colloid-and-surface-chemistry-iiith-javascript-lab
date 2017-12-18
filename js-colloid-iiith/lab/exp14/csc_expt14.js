@@ -18,6 +18,7 @@ addClickEvent: function(id, method){
 //removeClickEvent: Calls this method to remove EventListener for an element.
 removeClickEvent: function(id){
     document.getElementById(id).style.pointerEvents = 'none';
+    $("#"+id).off("click");
 },
 
 //enableClickEvent: Calls this method to enable EventListener for an element.
@@ -428,7 +429,7 @@ movement1: function(){
 			if(view.index1 == 65){
 				view.index1=1;
 				clearInterval(id2);
-				view.enableClickAll();
+				// view.enableClickAll();
 				link = "images/sprites/readings/read" + view.button_no + ".png";
 				$("#readings").attr("src",link);
 				$("#click").show();
