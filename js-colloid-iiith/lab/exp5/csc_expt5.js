@@ -193,7 +193,7 @@ var view = {
                     }
                 }, 50)
             }, 2800)
-        } else if (this.step_no == 6) {
+        } else if (this.step_no > 0) {
             $("#txt1").html("Water Solution");
             $("#pop_water").modal('show');
             $("#cover1_txt").html("Water Solution");
@@ -314,7 +314,7 @@ var view = {
                     }
                 }, 50)
             }, 10000)
-        } else if (this.step_no == 6) {
+        } else if (this.step_no > 1) {
             $("#txt1").html("Salt Solution");
             $("#pop_water").modal('show');
             $("#cover1_txt").html("Salt Solution");
@@ -437,7 +437,7 @@ var view = {
 
 
 
-        } else if (this.step_no == 6) {
+        } else if (this.step_no > 2) {
             $("#txt1").html("Sugar Solution");
             $("#pop_water").modal('show');
             $("#cover1_txt").html("Sugar Solution");
@@ -549,7 +549,7 @@ var view = {
                     this.x++;
                     if (this.x == 55) {
                         $("#beak4_water").css("top", "60.7%");
-                        $("#beak4_water").css("height","7.3%")
+                        $("#beak4_water").css("height", "7.3%")
                         $("#beak4_water").attr("src", "images/shapes/457.png");
                     }
                     if (this.x == 70) {
@@ -568,7 +568,7 @@ var view = {
                     }
                 }, 50)
             }, 10000)
-        } else if (this.step_no == 6) {
+        } else if (this.step_no > 3) {
             $("#pop_deter").modal('show');
         }
     },
@@ -640,7 +640,7 @@ var view = {
                 view.enableClickEvent('ag');
                 view.setInnerHTML('change', model.instruction6);
             }, 5400);
-        } else if (this.step_no == 6) {
+        } else if (this.step_no > 4) {
             $("#image3").attr("src", "images/images/3.png");
             $("#txt3").html("Fe(OH)<sub>3</sub> -Colloid Solution");
             $("#pop_colloid").modal('show');
@@ -718,7 +718,7 @@ var view = {
                 $("#ins").hide();
                 $("#check").hide();
             }, 5400);
-        } else if (this.step_no == 6) {
+        } else if (this.step_no > 5) {
             $("#image3").attr("src", "images/images/4.png");
             $("#txt3").html("Ag -Colloid Solution");
             $("#pop_colloid").modal('show');
