@@ -6,7 +6,8 @@ var model = {
     instruction4: '4. Make a soap solution using the detergent in the apparatus.',
     instruction5: '5. Make a Fe(OH)<sub>3</sub> colloid using the Fe(OH)<sub>3</sub> in the apparatus.',
     instruction6: '6. Make an Ag colloid using the Ag in the apparatus.',
-    instruction7: '7. Tyndal effect is observed when light is passed through the solution.' + 'Click on any of the beakers for detailed observtion.',
+    instruction7: '7. Tyndall effect is observed when light is passed through the solution.' +
+        'Click on any of the beakers for detailed observation.',
 };
 
 var view = {
@@ -138,6 +139,8 @@ var view = {
         if (this.step_no == 0) {
             $("#back1").show();
             $("#beak1").show();
+            $("#flsk").css("cursor", "default");
+            view.removeClickEvent("flsk");
             this.animateDirection_1('beak1', '+=38', '-=5', '1000');
             this.step_no++;
             setTimeout(function() {
@@ -188,7 +191,20 @@ var view = {
                         setTimeout(function() {
                             view.animateDirection_1('water_txt', '-=3', '-=0', '1000');
                         }, 500);
-                        view.enableClickEvent('salt');
+                        view.enableClickEvent("salt");
+                        $("#salt").css("cursor", "pointer");
+                        $("#salt_shrt").css("cursor", "pointer");
+                        $("#salt_shrt").on("click", function() {
+                            view.callSalt();
+                        });
+                        $("#beak1_water").css("cursor", "pointer");
+                        $("#beak1").css("cursor", "pointer");
+                        $("#beak1").on(
+                            "click",
+                            function() {
+                                view.water();
+                            }
+                        );
                         view.setInnerHTML('change', model.instruction2);
                     }
                 }, 50)
@@ -204,6 +220,10 @@ var view = {
         if (this.step_no == 1) {
             $("#back2").show();
             $("#beak2").show();
+            $("#salt").css("cursor", "default");
+            $("#salt_shrt").css("cursor", "default");
+            $("#salt_shrt").off("click");
+            view.removeClickEvent("salt");
             this.animateDirection_1('beak2', '+=38', '-=63', '1000');
             this.step_no++;
             setTimeout(function() {
@@ -310,6 +330,19 @@ var view = {
                             view.animateDirection_1('salt2_txt', '-=3', '-=0', '1000');
                         }, 500);
                         view.enableClickEvent('sgr');
+                        $("#sgr").css("cursor", "pointer");
+                        $("#sgr_shrt").css("cursor", "pointer");
+                        $("#sgr_shrt").on("click", function() {
+                            view.callSugar();
+                        });
+                        $("#beak2_water").css("cursor", "pointer");
+                        $("#beak2").css("cursor", "pointer");
+                        $("#beak2").on(
+                            "click",
+                            function() {
+                                view.callSalt();
+                            }
+                        );
                         view.setInnerHTML('change', model.instruction3);
                     }
                 }, 50)
@@ -325,6 +358,10 @@ var view = {
         if (this.step_no == 2) {
             $("#back3").show();
             $("#beak3").show();
+            $("#sgr").css("cursor", "default");
+            $("#sgr_shrt").css("cursor", "default");
+            $("#sgr_shrt").off("click");
+            view.removeClickEvent("sgr");
             this.animateDirection_1('beak3', '+=38', '-=52', '1000');
             this.step_no++;
             setTimeout(function() {
@@ -425,6 +462,22 @@ var view = {
                             view.animateDirection_1('sugar_txt', '-=3', '-=0', '1000');
                         }, 500);
                         view.enableClickEvent('dtr');
+                        $("#dtr").css("cursor", "pointer");
+                        $("#dtr_shrt").css("cursor", "pointer");
+                        $("#dtr_shrt").on(
+                            "click",
+                            function() {
+                                view.callDeter();
+                            }
+                        );
+                        $("#beak3_water").css("cursor", "pointer");
+                        $("#beak3").css("cursor", "pointer");
+                        $("#beak3").on(
+                            "click",
+                            function() {
+                                view.callSugar();
+                            }
+                        );
                         view.setInnerHTML('change', model.instruction4);
                     }
                 }, 50)
@@ -449,6 +502,10 @@ var view = {
         if (this.step_no == 3) {
             $("#back4").show();
             $("#beak4").show();
+            $("#dtr").css("cursor", "default");
+            $("#dtr_shrt").css("cursor", "default");
+            $("#dtr_shrt").off("click");
+            view.removeClickEvent("dtr");
             this.animateDirection_1('beak4', '+=38', '-=40', '1000');
             this.step_no++;
             setTimeout(function() {
@@ -564,6 +621,15 @@ var view = {
                             view.animateDirection_1('deter_txt', '-=3', '-=0', '1000');
                         }, 500);
                         view.enableClickEvent('feoh');
+                        $("#beak4_water").css("cursor", "pointer");
+                        $("#beak4").css("cursor", "pointer");
+                        $("#beak4").on(
+                            "click",
+                            function() {
+                                view.callDeter();
+                            }
+                        );
+                        $("#feoh").css("cursor", "pointer");
                         view.setInnerHTML('change', model.instruction5);
                     }
                 }, 50)
@@ -579,6 +645,8 @@ var view = {
             $("#beak5").show();
             $("#req_tag").show();
             $("#req_txt").show();
+            $("#feoh").css("cursor", "default");
+            view.removeClickEvent("feoh");
             this.animateDirection_1('beak5', '+=38', '-=28', '1000');
             this.step_no++;
             setTimeout(function() {
@@ -638,6 +706,12 @@ var view = {
                     view.animateDirection_1('feoh2_txt', '-=3', '-=0', '1000');
                 }, 500);
                 view.enableClickEvent('ag');
+                $("#ag").css("cursor", "pointer");
+                $("#beak5_water").css("cursor", "pointer");
+                $("#beak5").css("cursor", "pointer");
+                $("#beak5").on("click", function() {
+                    view.callFeoh();
+                });
                 view.setInnerHTML('change', model.instruction6);
             }, 5400);
         } else if (this.step_no > 4) {
@@ -652,6 +726,8 @@ var view = {
         if (this.step_no == 5) {
             $("#back6").show();
             $("#beak6").show();
+            $("#ag").css("cursor", "default");
+            view.removeClickEvent("ag");
             this.animateDirection_1('beak6', '+=38', '-=16', '1000');
             this.step_no++;
             setTimeout(function() {
@@ -717,6 +793,11 @@ var view = {
                 $("#final_txt").show();
                 $("#ins").hide();
                 $("#check").hide();
+                $("#beak6_water").css("cursor", "pointer");
+                $("#beak6").css("cursor", "pointer");
+                $("#beak6").on("click", function() {
+                    view.callAg();
+                });
             }, 5400);
         } else if (this.step_no > 5) {
             $("#image3").attr("src", "images/images/4.png");
@@ -826,4 +907,5 @@ var view = {
 window.onload = function() {
     view.activateEvents();
     view.removeEvents();
+    $("#flsk").css("cursor", "pointer");
 };
