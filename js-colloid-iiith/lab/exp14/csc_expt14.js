@@ -99,6 +99,7 @@ func1: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -117,6 +118,7 @@ func2: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -135,6 +137,7 @@ func3: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -153,6 +156,7 @@ func4: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -171,6 +175,7 @@ func5: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -189,6 +194,7 @@ func6: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -207,6 +213,7 @@ func7: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -225,6 +232,7 @@ func8: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -243,6 +251,7 @@ func9: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -261,6 +270,7 @@ func10: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -279,6 +289,7 @@ func11: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -297,6 +308,7 @@ func12: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -315,6 +327,7 @@ func13: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -333,6 +346,7 @@ func14: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -351,6 +365,7 @@ func15: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -369,6 +384,7 @@ func16: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -387,6 +403,7 @@ func17: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -405,6 +422,7 @@ func18: function(){
 	setTimeout(function(){
 		$("#hand2").show();
 		$("#cell").show();
+		$("#rod_button1").css("cursor","pointer");
 	},3000);
 },
 
@@ -416,6 +434,7 @@ movement1: function(){
 	if(view.step_no == 2){
 		$("#hand2").hide();
 		$("#cell").hide();
+		$("#rod_button1").css("cursor","default");
 		this.index1=1;
 		id2=setInterval(function(){
 			images=[];
@@ -434,6 +453,7 @@ movement1: function(){
 				$("#readings").attr("src",link);
 				$("#click").show();
 				$("#hand3").show();
+				$("#rod_button2").css("cursor","pointer");
 			}
 		},50);
 		view.step_no++;
@@ -464,6 +484,7 @@ movement2: function(){
 				$("#pour").attr("src","images/sprites/flask_pour/0.png");
 				$("#hand1").show();
 				$("#conc").show();
+				$("#rod_button2").css("cursor","default");
 			}
 		},50);
 		view.step_no++;

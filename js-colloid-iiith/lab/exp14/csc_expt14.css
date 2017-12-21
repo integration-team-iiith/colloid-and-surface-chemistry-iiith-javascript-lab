@@ -18,10 +18,10 @@ body {
 #background {
     position: absolute;
     z-index: 1;
-    top: 5%;
+    top: 6%;
     left: 15%;
     width: 64.9%;
-    height: 80%;
+    height: 84%;
 }
 
 #scale {
@@ -38,7 +38,7 @@ body {
     z-index: 2;
     width: 5.7%;
     left: 23.8%;
-    top: 57.2%;
+    top: 59.4%;
     height: 4.9%;
 }
 
@@ -253,7 +253,7 @@ body {
     z-index: 7;
     width: 10.65%;
     height: 6.5%;
-    top: 56.2%;
+    top: 58.4%;
     left: 30%;
 }
 
@@ -536,6 +536,6 @@ body {
 
 #rst_btn {
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 40%;
 }
